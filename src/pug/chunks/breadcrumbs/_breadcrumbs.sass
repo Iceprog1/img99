@@ -1,0 +1,33 @@
+.breadcrumbs
+	&-cont
+		margin: 40px 0 30px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	ul
+		display: flex
+		padding: 0
+		margin: 0
+		li
+			margin-bottom: 10px
+			a,span
+				font-size: 18px
+				font-weight: 400
+				color: #000
+				&::after
+					content: '/'
+			span
+				&::after
+					content: ''
+	.prev-next
+		display: flex
+		align-items: center
+		gap: 50px
+
+@media (max-width: $md)
+	.breadcrumbs
+		.prev-next
+			margin-top: 15px
+			display: flex
+			justify-content: end
+			width: 100%

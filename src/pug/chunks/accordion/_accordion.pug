@@ -1,0 +1,35 @@
+mixin section(name, arr)
+	if name == ''
+		each item in arr
+			section.accordion
+				.accordion-cont 
+					ul
+						li Таблица размеров
+						.accordion-content.active
+							.dimensions
+								ul
+									li(data-chest="60" data-hips="70") 34/XXS
+									li(data-chest="26" data-hips="37") 34/XXS
+									li(data-chest="60" data-hips="70") 38/S
+									li(data-chest="60" data-hips="70") 40/M
+									li(data-chest="60" data-hips="70") 42/L
+									li(data-chest="60" data-hips="70") 44/XL
+									li(data-chest="60" data-hips="70") 46/XXL
+							ul
+								li Грудь: <span class='che'>60</span> см
+								li Бедра: <span class='hip'>48</span> см
+						li Характеристики
+						.accordion-content
+							ul
+								li Длина: 76 См.
+								li Цвет: Желтый
+								li Силуэт: Приталенный
+								li Сезон: Мульти
+								li Рукав: Без Рукавов
+								li Застёжка: Нет
+								li Подкладка: 100% Полиэстер
+								li Рост Модели: 175-178 См
+						li Состав и уход
+						.accordion-content
+							ul
+								li Состав Ткани: 77 % Полиэстер, 20% Вискоза, 3% Эластан

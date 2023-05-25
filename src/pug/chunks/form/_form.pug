@@ -1,0 +1,25 @@
+mixin section(name, arr)
+	if name == 'formBgImage'
+		each item in arr
+			section.formBgImage
+				.container 
+					.formBgImage-cont
+						.formBgImage-form
+							form(action="") 
+								.formBgImage-form_title Обратный звонок
+								.formBgImage-form_inputs
+									.formBgImage-form_input
+										+input('squareShadow', [
+											{placeholder: 'Введите имя',label: 'Имя'}
+										])
+									.formBgImage-form_input 
+										+input('squareShadow', [
+											{placeholder: 'Номер телефона',label: 'Номер'}
+										])
+								.formBgImage-form_checkbox 
+									+checkbox('checkboxSmall', [{
+										name: 'checkboxSmall',
+										label: 'Я согласен на обработку моих персоональных данных'
+									}])
+								.formBgImage-form_button
+									+btn('btnCircle', [{'text': 'Получить смету'}])

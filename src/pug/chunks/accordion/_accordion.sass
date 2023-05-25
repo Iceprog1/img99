@@ -1,0 +1,38 @@
+.accordion
+	&-cont
+		>ul
+			padding: 0
+			>li
+				font-size: 16px
+				font-weight: 600
+				line-height: 22px
+				cursor: pointer
+				margin-bottom: 10px
+	&-content
+		max-height: 0
+		overflow: hidden
+		transition: 0.7s
+		ul
+			padding: 0
+			margin-bottom: 20px
+		.dimensions
+			ul
+				display: flex
+				gap: 20px
+				li
+					cursor: pointer
+	.active
+		max-height: 500px
+
+@media (max-width: 770px)
+	.accordion
+		&-cont
+			ul
+				li
+					font-size: 14px
+					gap: 5px
+		&-content
+			.dimensions
+				ul
+					font-size: 14px
+					gap: 5px

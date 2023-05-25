@@ -1,0 +1,35 @@
+.verticalSlider
+	overflow: hidden
+	&-sliderwrap
+		padding-top: 111%
+		position: relative
+	&-slider
+		position: absolute
+		left: 0
+		top: 0
+		display: flex
+		gap: 15px
+		height: 100%
+		&_left
+			max-width: 96px
+			img
+				height: 100%
+		&_right
+			width: 100%
+			max-width: 544px
+			img
+				height: 100%
+
+.similar
+	margin-top: 30px
+	&-title
+		font-size: 16px
+		font-weight: bold
+		margin-bottom: 8px
+	img
+		width: 100%
+
+
+@media (max-width: $md)
+	.similar
+		//

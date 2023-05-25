@@ -1,0 +1,84 @@
+header.header
+	.header-cont
+		//-.header-burger
+			a(href="#") 
+				img(src="@img/svg/burger.svg" alt="")
+		.header-logo
+			a(href="#")
+				img(src="@img/img99/svg/logo.svg" alt="")
+		//-.header-two
+		nav
+			ul.header-menu
+				li 
+					a(href="#" aria-label="Конвертация") Конвертация
+				li 
+					a(href="#" aria-label="Водяной знак") Водяной знак
+				li 
+					a(href="#" aria-label="Сжатие") Сжатие
+
+		.header-right
+			.header-right_lang
+				+btn('',[
+					{
+						class: 'dropdown bgHoverGray',
+						faR: 'fa-solid fa-chevron-down',
+						text: 'RU'
+					}
+				])
+				ul.header-right_lang__dropdown
+					li
+						a(href="#") EN
+			.header-right_social
+				+btn('', [
+					{
+						'class': 'telega',
+						'text': '',
+						'imgL': '@img/img99/icons/telega.svg',
+						'href': '#'
+					}
+					])
+				+btn('', [
+					{
+						'class': 'vk',
+						'text': '',
+						'imgL': '@img/img99/icons/vk.svg',
+						'href': '#'
+					}
+					])
+				+btn('', [
+					{
+						'class': 'btnRed',
+						'text': 'Помочь проекту',
+						'imgL': '',
+						'href': '#'
+					}
+					])
+				//-a(href="#")
+				//-	img(src="@img/img99/icons/telega.svg" alt="")
+				//-a(href="#")
+				//-	img(src="@img/img99/icons/vk.svg" alt="")
+
+	//-nav.header-nav
+		.container 
+			.header-nav_cont
+				.close 
+					span
+				ul
+					li
+						a(href="#") Платья
+					li
+						a(href="#") Блузы/рубашки/топы
+					li
+						a(href="#") Брюки
+					li
+						a(href="#") Юбки
+					li
+						a(href="#") Жакеты/пиджаки      
+					li
+						a(href="#") Кофты/лонгсливы/бадлоны                 
+					li
+						a(href="#") Хлопок /лён       
+					li
+						a(href="#") Трикотаж       
+					li
+						a(href="#") Спортивная одежда      

@@ -1,0 +1,13 @@
+mixin section(name, arr)
+	if name == 'bottomLine'
+		each item in arr
+			input(type="text" placeholder=item.placeholder class='bottomLine')
+	//- Квадратное поле ввода с тенью
+	if name == 'squareShadow'
+		each item in arr
+			if item.label
+				label.squareShadowLabel
+					span=item.label
+					input(type="text" placeholder=item.placeholder class='squareShadow' name=item.name)
+			else
+				input(type="text" placeholder=item.placeholder class='squareShadow' name=item.name)

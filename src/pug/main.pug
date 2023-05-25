@@ -1,0 +1,65 @@
+//-хлебные крошки breadcrumbs
+mixin breadcrumbs(name = '', arr = [{}])
+	if true
+		include chunks/breadcrumbs/_breadcrumbs
+		+section(name, arr)
+
+//-вертикальный слайер
+mixin slider(name = '', arr = [{}])
+	if true
+		include chunks/slider/_slider
+		+section(name, arr)
+
+//-секция размеров
+mixin sizes(name = '', arr = [{}])
+	if true
+		include chunks/sizes/_sizes
+		+section(name, arr)
+
+
+//-раскрывабщиеся блоки акардион
+mixin accordion(name = '', arr = [{}])
+
+	if true
+		include chunks/accordion/_accordion
+		+section(name, arr)
+//-раскрывабщиеся блоки акардион
+mixin accordion(name = '', arr = [{}])
+	if true
+		include chunks/accordion/_accordion
+		+section(name, arr)
+
+mixin productAndSlider(name = '', arr = [{}])
+	if true
+		include chunks/product/productAndSlider/_productAndSlider
+		+section(name, arr)
+
+//-кнопки -+btn('default', [{'class': 'showSizes', 'text': 'выбор размеров', 'img': '@img/svg/busket_w.svg'}])
+mixin btn(name = '', arr = [{}])
+	if true
+		include chunks/btn/img99/_btn
+		+section(name, arr)
+
+//-2 блока слева и справа
+mixin line(name = '', arr = [{}])
+	if true
+		include chunks/line/_line
+		+section(name, arr)
+
+//-инпуты
+mixin input(name = '', arr = [{}])
+	if true
+		include chunks/input/_input
+		+section(name, arr)
+//-checkbox
+mixin checkbox(name = '', arr = [{}])
+	if true
+		include chunks/checkbox/_checkbox
+		+section(name, arr)
+//-checkbox
+mixin form(name = '', arr = [{}])
+	if true
+		include chunks/form/_form
+		+section(name, arr)
+
+

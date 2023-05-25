@@ -1,0 +1,21 @@
+mixin section(name, arr)
+	if name == ''
+		each item in arr
+			if item.href
+				a(class=`btnImg99 ${item.class}` href=item.href)
+					if item.imgL
+						img(src=item.imgL, alt="")
+					=item.text
+					if item.imgR
+						img(src=item.imgR, alt="")
+			if !item.href
+				button(class=`${item.class}`)
+					if item.imgL
+						img(src=item.imgL, alt="")
+					if item.faL
+						i(class=item.faL)
+					=item.text
+					if item.faR
+						i(class=item.faR)
+					if item.imgR
+						img(src=item.imgR, alt="")

@@ -1,0 +1,18 @@
+mixin section(name, arr)
+	if name == ''
+		each item in arr
+			section.breadcrumbs
+				.container
+					.breadcrumbs-cont
+						ul
+							li
+								a(href="#") Каталог
+							li
+								a(href="#") брюки  классика
+							li
+								span А801blue
+						.prev-next
+							a(href="#") 
+								img(src="@img/svg/prev.svg" alt="")
+							a(href="#") 
+								img(src="@img/svg/next.svg" alt="")

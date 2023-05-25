@@ -1,0 +1,18 @@
+-
+	var title = 'Главная';
+	var description = 'Описание';
+include ../main
+<!DOCTYPE html>
+<html lang="ru">
+html
+	head
+		include _head
+	body
+		include ../chunks/header/img99/_header
+
+		//- блок контента
+		main.content
+			block main
+
+		include ../chunks/footer/footerCol/_footer
+		include _scripts

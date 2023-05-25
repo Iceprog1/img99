@@ -1,0 +1,49 @@
+mixin section(name, arr)
+
+	if name == 'verticalSlider'
+		each item in arr
+			section.verticalSlider
+				.verticalSlider-sliderwrap
+					.verticalSlider-slider
+						.verticalSlider-slider_left
+							.swiper.verticalSliderLeft
+								.swiper-wrapper
+									.swiper-slide
+										img(src="@img/product/prid1.png" alt="")
+									.swiper-slide
+										img(src="@img/product/prid1.png" alt="")
+									.swiper-slide
+										img(src="@img/product/prid1.png" alt="")
+									.swiper-slide
+										img(src="@img/product/prid1.png" alt="")
+									.swiper-slide
+										img(src="@img/product/prid1.png" alt="")
+									.swiper-slide
+										img(src="@img/product/prid1.png" alt="")
+						.verticalSlider-slider_right
+							.swiper.verticalSliderRight
+								.swiper-wrapper
+									.swiper-slide
+										img(src="@img/product/prid1.png" alt="")
+									.swiper-slide
+										img(src="@img/product/prid1.png" alt="")
+									.swiper-slide
+										img(src="@img/product/prid1.png" alt="")
+									.swiper-slide
+										img(src="@img/product/prid1.png" alt="")
+									.swiper-slide
+										img(src="@img/product/prid1.png" alt="")
+									.swiper-slide
+										img(src="@img/product/prid1.png" alt="")
+	if true
+		each item in arr
+			section.similar
+				.container 
+					.similar-cont
+						.similar-title #{item.title}
+						.similar-items
+							.swiper.similarSweper
+								.swiper-wrapper
+									-for(let i = 0; i < item.items; i++)
+										a.swiper-slide(href="#")
+											img(src=item.img alt="")

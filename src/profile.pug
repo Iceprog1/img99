@@ -1,0 +1,36 @@
+extends pug/base/base
+
+block main
+	section.profileTwoCol
+		.container 
+			.profileTwoCol-cont
+				//-+line('lineLeftRightElement')
+				+line('lineTubs')
+				.profileTwoCol-form
+					.row
+						.profileTwoCol-form_left.col-md-6.pe-md-5
+							.profileTwoCol-form_left__title Данные для доступа к сайту
+							+input('bottomLine', [
+								{'placeholder': 'Введите логин *'},
+								{'placeholder': 'Введите пароль *'},
+								{'placeholder': 'Подтвердите логин *'},
+								{'placeholder': 'Введите email *'},
+							])
+						.profileTwoCol-form_left.col-md-6.ps-md-5
+							.profileTwoCol-form_left__title Личные данные
+							+input('bottomLine', [
+								{'placeholder': 'Введите фамилию *'},
+								{'placeholder': 'Введите имя *'},
+								{'placeholder': 'Введите отчество *'},
+								{'placeholder': 'Введите название компании *'},
+								{'placeholder': 'Введите номер *'},
+								{'placeholder': 'Город *'},
+								])
+					.row
+						//-.col-md-6
+						//-	.d-flex
+								//-+chechbox()
+								//-label(for="checkboxSquare") Оповещение о снижении цен на товары, акциях и распродажах 
+						.col-md-6
+							.d-flex.justify-content-end
+								+btn('rectangular', [{'text': 'сохранить'}])

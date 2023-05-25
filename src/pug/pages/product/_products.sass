@@ -1,0 +1,64 @@
+.product
+	margin-bottom: 50px
+	&-right
+		padding-left: 30px
+		&_title
+			font-size: 18px
+			font-weight: 600
+			margin-bottom: 16px
+		&_properties
+			margin-bottom: 50px
+			ul
+				padding: 0
+				li
+					margin-bottom: 10px
+					line-height: 24px
+		&_price
+			font-size: 18px
+			font-weight: 600
+			line-height: 25px
+			margin-bottom: 50px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.share
+				font-size: 14px
+				font-weight: 400
+				span
+					margin-right: 4px
+		p
+			font-size: 16px
+			font-weight: 400
+			line-height: 22px
+			letter-spacing: 0em
+			text-align: left
+		.sizes
+			height: fit-content
+			position: relative
+			max-width: 393px
+			top: 0
+			&-cont
+				padding: 31px 0
+				display: flex
+				justify-content: center
+			ul
+				padding: 0
+
+
+
+@media (max-width: $md)
+	.verticalSlider
+		margin-bottom: 30px
+		&-slider_left
+			display: none
+		&-slider_right
+			img
+				height: auto
+				width: 100%
+	.product
+		&-right
+			padding-left: 0
+			&_properties
+				margin-bottom: 15px
+			&_title
+				font-weight: 400

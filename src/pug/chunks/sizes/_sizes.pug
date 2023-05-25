@@ -1,0 +1,25 @@
+mixin section(name, arr)
+	if name == ''
+		each item in arr
+			.sizes
+				if item.title
+					span= item.title
+				.sizes-cont
+					-
+						let array = [40,42,44,46,48,50,52,54];
+							size = 2;
+							sizesUl = [];
+						for (let i = 0; i < size; i++)
+							sizesUl[i] = array.slice((i*array.length/size), (i*array.length/size) + array.length/size);
+					each uls in sizesUl
+						ul
+							each li in uls
+								li
+									span=li
+									.number
+										button.minus -
+										input.quantity(value='0')
+										button.plus +
+
+				.addToCart
+					+btn('', [{'text': 'в корзину', 'img': '@img/svg/busket_w.svg'}])

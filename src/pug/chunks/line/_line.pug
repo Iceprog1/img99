@@ -1,0 +1,13 @@
+mixin section(name, arr)
+	if name == 'lineTubs'
+		.lineTubs
+			a(href="#").active Профиль
+			a(href="#") Заказы
+				span 1
+			a(href="#") Корзина
+				span 2
+	if name == 'lineLeftRightElement'
+		each item in arr
+			.lineLeftRightElement
+				.lineLeftRightElement-title Здравствуйте, Адам Адамов!
+				a(href="#")  Выход

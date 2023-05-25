@@ -1,0 +1,64 @@
+.checkboxSquare
+	position: relative
+	width: 20px
+	cursor: pointer
+	height: 20px
+	border: 1px solid #7c7c7c
+	outline: none
+	background-color: #fff
+	appearance: none
+	margin: 0
+	margin-right: 6px
+	transition: 250ms
+	transition-timing-function: ease-in-out
+	border-radius: 1px
+	flex-shrink: 0
+	&:checked:after
+		content: url('data:image/svg+xml;utf8, <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 10L0 5.19231L1.4 3.84615L5 7.30769L12.6 0L14 1.34615L5 10Z" fill="%235ec853"/></svg>')
+		content: url('../../../img/svg/galochka.svg')
+		position: absolute
+		margin: auto
+		text-align: center
+		top: 50%
+		left: 0
+		right: 0
+		transform: translateY(-50%)
+	& + label
+		cursor: pointer
+		font-size: 14px
+		font-weight: 300
+
+/*checkboxSmall*/
+.checkboxSmall
+	position: relative
+	width: 15px
+	cursor: pointer
+	height: 15px
+	border: 1px solid #7c7c7c
+	outline: none
+	background-color: #fff
+	appearance: none
+	margin: 0
+	margin-right: 6px
+	transition: 250ms
+	transition-timing-function: ease-in-out
+	border-radius: 1px
+	flex-shrink: 0
+	&:checked:after
+		content: url('data:image/svg+xml;utf8, <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 10L0 5.19231L1.4 3.84615L5 7.30769L12.6 0L14 1.34615L5 10Z" fill="%235ec853"/></svg>')
+		position: absolute
+		margin: auto
+		text-align: center
+		top: 50%
+		left: 0
+		right: 0
+		transform: translateY(-50%)
+	& + span
+		cursor: pointer
+		font-size: 11px
+		font-weight: 300
+
+.checkboxSmallLabel
+	display: flex
+
+/*checkboxSmall*/

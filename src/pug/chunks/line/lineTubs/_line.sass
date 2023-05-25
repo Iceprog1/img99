@@ -1,0 +1,24 @@
+.lineTubs
+	display: flex
+	justify-content: space-between
+	margin-bottom: 100px
+	a
+		position: relative
+		font-size: 20px
+		color: #000
+		border-bottom: 2px solid #798086
+		width: 100%
+		text-align: center
+		padding-bottom: 15px
+		span
+			position: absolute
+			font-size: 14px
+			top: -6px
+	.active
+		border-bottom: 2px solid #000000
+
+@media (max-width: $sm)
+	.lineTubs
+		margin-bottom: 30px
+		a 
+			font-size: 14px

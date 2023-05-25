@@ -1,0 +1,17 @@
+mixin section(name, arr)
+	if name == ''
+		each item in arr
+			div(class=`btnGrey ${item.class}`)
+				if item.img
+					img(src=item.img, alt="")
+				=item.text
+	if name == 'rectangular'
+		each item in arr
+			.rectangular=item.text
+	//- Круглая зеленая кнопка
+	if name == 'btnCircle'
+		each item in arr
+			button.btnCircle(name=item.name)
+				if item.img
+					img(src=item.img, alt="")
+				=item.text

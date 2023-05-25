@@ -1,0 +1,41 @@
+extends pug/base/base
+
+block main
+
+	+breadcrumbs()
+	section.product
+		.container
+			.product-cont
+				.row
+					.col-md-6
+						+slider('verticalSlider')
+					.col-md-6
+						.product-right
+							.product-right_title Брюки прямые
+							.product-right_properties
+								ul
+									li А801blue
+									li Размерный ряд: 42-52
+							.product-right_price
+								.price 2250 руб. 
+								.share
+									span Поделиться
+									img(src="@img/svg/share.svg" alt="")
+							p Мы используем только натуральные материалы, которые обеспечивают комфорт и долговечность изделий. Вы можете быть уверены, что эти брюки будут служить вам верой и правдой на протяжении долгого времени, не теряя своей формы и цвета. Они подойдут как для повседневной носки, так и для офиса, вечерних мероприятий-летом и весной благодаря своей легкости и комфорту. Стиль этих брюк сочетает в себе классические элементы и современные тенденции.
+							+accordion()
+							+sizes('', [{'title': 'Выбор размеров'}])
+					+slider('', [{
+						'title': 'С этим товаром покупают',
+						'img': '@img/catalog/intetest.png',
+						'items': 9
+						}])
+					+slider('', [{
+						'title': 'Похожие товары',
+						'img': '@img/catalog/DSC03745 1.png',
+						'items': 9
+						}])
+					+slider('', [{
+						'title': 'Вы интересовались',
+						'img': '@img/catalog/DSC06697 1.png',
+						'items': 9
+						}])

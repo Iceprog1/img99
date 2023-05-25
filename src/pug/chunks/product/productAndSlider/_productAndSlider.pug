@@ -1,0 +1,22 @@
+mixin section(name, arr)
+	if name == ''
+		each item in arr
+			.carts-cart.col-md-4
+				if item.images
+					.carts-cart_image
+						.swiper.productAndSlider
+							.swiper-wrapper
+								each image in item.images
+									a.swiper-slide(href="#")
+										img(src=image alt="")
+							.swiper-button-next
+							.swiper-button-prev
+						+sizes()
+						+btn('', [{'class': 'showSizes', 'text': 'выбор размеров'}])
+				if item.title
+					.carts-cart_title #{item.title}
+				if item.attr
+					ul
+						each arrt in item.attr
+							li= arrt
+					.carts-cart_price <span>4100</span> руб.

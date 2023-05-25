@@ -1,0 +1,80 @@
+.header
+	border-bottom: 1px solid #000
+	padding: 10px 0
+	&-cont
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&-text
+		margin-right: auto
+		a
+			font-family: OFLGoudyStMTT
+			font-size: 25px
+			color: #000
+	&-burger
+		margin-right: 25px
+		i
+			font-size: 25px
+	&-icons
+		display: flex
+		gap: 15px
+		&_icon
+			max-width: 20px
+			img
+				width: 100%
+	&-nav
+		position: fixed
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		background: #fff
+		overflow: hidden
+		height: 0
+		transition: 1s
+		z-index: 3
+		&_cont
+			padding-top: 25px
+			i
+				margin-bottom: 25px
+				font-size: 30px
+				cursor: pointer
+			ul
+				padding-left: 0
+				li
+					a
+						font-weight: 200
+						font-size: 18px
+						line-height: 35px
+						color: #000
+		.close
+			position: relative
+			width: 26px
+			height: 26px
+			cursor: pointer
+			top: 3px
+			left: -1px
+			margin-bottom: 45px
+			span
+				display: block
+				&::before
+					content: ''
+					display: block
+					width: 100%
+					border: 2px solid #000000
+					transform: matrix(0.71, 0.71, -0.94, 0.34, 0, 0)
+					position: absolute
+					left: 0
+					top: 0
+				&::after
+					content: ''
+					display: block
+					width: 100%
+					border: 2px solid #000000
+					transform: matrix(0.71, -0.71, 0.94, 0.34, 0, 0)
+					position: absolute
+					left: 0
+					top: 0
+	.active
+		
+		height: 100%
