@@ -15,7 +15,11 @@ mixin section(name, arr)
 					if item.faL
 						i(class=item.faL)
 					=item.text
-					if item.faR
-						i(class=item.faR)
+					if item.arrow
+						img(src=item.arrow, alt="", class=`${item.arrowClass}`)
 					if item.imgR
 						img(src=item.imgR, alt="")
+	if name == 'menuB'
+		each item in arr
+			.menuB
+				span.menuB-line

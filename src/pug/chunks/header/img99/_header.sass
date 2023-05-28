@@ -1,37 +1,12 @@
 .header
-	padding: 20px 49px
 	background-color: #303030
+	height: 90px
+	padding: 0 48px
 	&-cont
 		display: flex
 		align-items: center
 		justify-content: space-between
-	&-menu
-		margin: 0
-		display: flex
-		gap: 20px
-		a
-			padding: 6px 10px
-			font-size: 18px
-			color: #ffffff00
-			position: relative
-			&::before
-				position: absolute
-				font-weight: $light
-				content: attr(aria-label)
-				color: #fff
-				white-space: nowrap
-				width: 100%
-				height: 100%
-				display: flex
-				justify-content: center
-				align-items: center
-				top: 0
-			&:hover
-				background: $gray
-				border-radius: 4px
-				transition: $transition
-				&::before
-					font-weight: $medium
+		height: 100%
 	&-right
 		display: flex
 		align-items: center
@@ -39,18 +14,21 @@
 			position: relative
 			margin-right: 28px
 			.dropdown
-				padding: 8px
-				i
-					margin-left: 10px
+				padding: 6px 8px
 			&__dropdown
 				position: absolute
 				left: 0
-				padding: 8px
 				margin: 0
-				bottom: -26px
+				top: 32px
 				display: none
+				width: 100%
+				padding: 0
 				a
+					padding: 4px 8px
 					color: $def
+					display: block
+					&:hover
+						background: $grayH
 		.active
 			background: #3d3d3d
 			border-radius: 4px
@@ -59,6 +37,11 @@
 				background: #3d3d3d
 				border-radius: 4px
 				width: 100%
+		.arrow
+			transition: $transition
+		.rotate
+			rotate: 180deg
+			margin-top: -2px
 		&_social
 			display: flex
 			gap: 24px
@@ -72,3 +55,83 @@
 		font-size: 18px
 		&:hover
 			box-shadow: $box-shadow
+	//&-mobmenu
+	//	position: absolute
+	//	background: $def
+	//	width: 100%
+	//	height: 100%
+	//	display: block
+	//	top: 108px
+	//	left: 0
+	//	z-index: 2
+	//	display: none1
+	//	&_cont
+	//		justify-content: center
+	//		display: grid
+	//		text-align: center
+	//		padding-top: 23px
+	//	&_lang
+	//		position: relative
+	//		margin-bottom: 130px
+	//		.mobdropdown
+	//			padding: 6px 8px
+	//		&__mobdropdown
+	//			position: absolute
+	//			left: 0
+	//			margin: 0
+	//			top: 32px
+	//			display: none
+	//			width: 100%
+	//			padding: 0
+	//			a
+	//				padding: 4px 8px
+	//				color: $text
+	//				display: block
+	//	&_social
+	//		display: flex
+	//		gap: 24px
+	//		justify-content: center
+	//	&_help
+	//		margin-bottom: 44px
+	//&-menumob
+	//	padding: 0
+	//	margin-bottom: 130px
+	//	li
+	//		margin-bottom: 30px
+	//		a
+	//			color: #000
+	//			&:hover
+	//				font-weight: 500
+	.active
+		display: block
+		color: #000
+	.arrow
+		transition: $transition
+	.rotate
+		rotate: 180deg
+		margin-top: -2px
+	.open
+		display: block
+	.menuB
+		display: none
+
+@media (max-width: $xl)
+	.header
+		height: 58px
+		nav
+			background: #dc3545
+			width: 100%
+			left: 0
+			top: 58px
+			height: 100%
+			position: fixed
+		&-menu
+			flex-direction: column
+			align-items: center
+	//.headernav-menu
+		&-menu
+			//display: none
+		&-right
+			//display: none
+		.menuB
+			display: block
