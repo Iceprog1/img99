@@ -1,129 +1,65 @@
 header.header
-	.header-cont
-		.header-logo
-			a(href="#")
-				img(src="@img/img99/svg/logo.svg" alt="")
-		nav.header-nav
-			+menu(
-				'', 
-				[
-				{
-					href: '#',
-					text: 'Конвертация'
-				},
-				{
-					href: '#',
-					text: 'Водяной знак'
-				},
-				{
-					href: '#',
-					text: 'Сжатие'
-				}
-				],
-				{
-					class: 'header-menu'
-				}
-			)
+	.container
+		.header-cont
+			.header-logo
+				a(href="#")
+					img(src="@img/img99/svg/logo.svg" alt="")
+			nav.header-nav
+				+menu(
+					'', 
+					[
+					{
+						href: '#',
+						text: 'Конвертация'
+					},
+					{
+						href: '#',
+						text: 'Водяной знак'
+					},
+					{
+						href: '#',
+						text: 'Сжатие'
+					}
+					],
+					{
+						class: 'menu-line'
+					}
+				)
 
-		.header-right
-			.header-right_lang
-				+btn('',[
-					{
-						class: 'dropdown bgHoverGray',
-						arrow: '@img/img99/svg/arrow.svg',
-						text: 'RU',
-						arrowClass: 'arrow'
-					}
-				])
-				ul.header-right_lang__dropdown
-					li
-						a(href="#") EN
-			.header-right_social
-				+btn('', [
-					{
-						'class': 'telega',
-						'text': '',
-						'imgL': '@img/img99/icons/telega.svg',
-						'href': '#'
-					}
+			.header-right
+				.header-right_lang
+					+accordion('default', [
+						{
+							class: 'accordion-list',
+							href: '#',
+							text: 'EN'
+						}
 					])
-				+btn('', [
-					{
-						'class': 'vk',
-						'text': '',
-						'imgL': '@img/img99/icons/vk.svg',
-						'href': '#'
-					}
-					])
-				+btn('', [
-					{
-						'class': 'btnRed',
-						'text': 'Помочь проекту',
-						'imgL': '',
-						'href': '#'
-					}
-					])
-		+btn('menuB')
-
-	//-.header-mobmenu
-	//-	.container
-	//-		.header-mobmenu_cont
-	//-			.header-mobmenu_lang
-	//-				+btn('',[
-	//-					{
-	//-						class: 'mobdropdown',
-	//-						arrow: '@img/img99/svg/arrowmob.svg',
-	//-						text: 'RU',
-	//-						arrowClass: 'arrowmob'
-	//-					}
-	//-				])
-	//-				ul.header-mobmenu_lang__mobdropdown
-	//-					li
-	//-						a(href="#") EN
-	//-			.header-mobmenu_menu
-	//-				+menu(
-	//-					'', 
-	//-					[
-	//-					{
-	//-						href: '#',
-	//-						text: 'Конвертация'
-	//-					},
-	//-					{
-	//-						href: '#',
-	//-						text: 'Водяной знак'
-	//-					},
-	//-					{
-	//-						href: '#',
-	//-						text: 'Сжатие'
-	//-					}
-	//-					],
-	//-					{
-	//-						class: 'header-menumob'
-	//-					}
-	//-				)
-	//-			.header-mobmenu_help
-	//-				+btn('', [
-	//-					{
-	//-						'class': 'btnRed',
-	//-						'text': 'Помочь проекту',
-	//-						'imgL': '',
-	//-						'href': '#'
-	//-					}
-	//-					])
-	//-			.header-mobmenu_social
-	//-				+btn('', [
-	//-					{
-	//-						'class': 'telega',
-	//-						'text': '',
-	//-						'imgL': '@img/img99/icons/telegab.svg',
-	//-						'href': '#'
-	//-					}
-	//-					])
-	//-				+btn('', [
-	//-					{
-	//-						'class': 'vk',
-	//-						'text': '',
-	//-						'imgL': '@img/img99/icons/vkb.svg',
-	//-						'href': '#'
-	//-					}
-	//-					])
+				.header-right_social
+					.header-right_social__network
+						+btn('', [
+							{
+								'class': 'header-right_social__network__img',
+								'text': '',
+								'imgL': '@img/img99/icons/telega.svg',
+								'href': '#'
+							}
+							])
+						+btn('', [
+							{
+								'class': 'header-right_social__network__img',
+								'text': '',
+								'imgL': '@img/img99/icons/vk.svg',
+								'href': '#'
+							}
+							])
+					+btn('', [
+						{
+							'class': 'btnRed',
+							'text': 'Помочь проекту',
+							'imgL': '',
+							'href': '#'
+						}
+						])
+			.header-button
+				+btn('menubtn')

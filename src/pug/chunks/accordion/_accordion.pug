@@ -1,4 +1,21 @@
 mixin section(name, arr)
+	if name == 'default'
+		each item in arr
+			.dropdown
+				.dropdown-cont
+					+btn('',[
+						{
+							class: 'dropdownbtn bgHoverGray',
+							faR: 'fas fa-chevron-down',
+							text: 'RU'
+						}
+					])
+					if item.class
+						ul(class=item.class)
+							li
+								if item.href
+									a(href=item.href) 
+										=item.text
 	if name == ''
 		each item in arr
 			section.accordion
@@ -33,3 +50,8 @@ mixin section(name, arr)
 						.accordion-content
 							ul
 								li Состав Ткани: 77 % Полиэстер, 20% Вискоза, 3% Эластан
+
+
+
+
+

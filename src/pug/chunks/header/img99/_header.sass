@@ -1,137 +1,105 @@
 .header
 	background-color: #303030
-	height: 90px
-	padding: 0 48px
 	&-cont
 		display: flex
 		align-items: center
 		justify-content: space-between
 		height: 100%
+		height: 90px
+	&-nav
+		transition: all 0.5s ease-in-out
 	&-right
 		display: flex
 		align-items: center
 		&_lang
 			position: relative
 			margin-right: 28px
-			.dropdown
-				padding: 6px 8px
-			&__dropdown
-				position: absolute
-				left: 0
-				margin: 0
-				top: 32px
-				display: none
-				width: 100%
-				padding: 0
-				a
-					padding: 4px 8px
-					color: $def
-					display: block
-					&:hover
-						background: $grayH
-		.active
-			background: #3d3d3d
-			border-radius: 4px
-			.header-right_lang__dropdown
-				display: block
-				background: #3d3d3d
-				border-radius: 4px
-				width: 100%
-		.arrow
-			transition: $transition
-		.rotate
-			rotate: 180deg
-			margin-top: -2px
 		&_social
 			display: flex
 			gap: 24px
 			align-items: center
-	.btnRed
-		color: #fff
-		background: #E82424
-		border-radius: 8px
-		padding: 13px 26px
-		font-weight: $semiBold
-		font-size: 18px
-		&:hover
-			box-shadow: $box-shadow
-	//&-mobmenu
-	//	position: absolute
-	//	background: $def
-	//	width: 100%
-	//	height: 100%
-	//	display: block
-	//	top: 108px
-	//	left: 0
-	//	z-index: 2
-	//	display: none1
-	//	&_cont
-	//		justify-content: center
-	//		display: grid
-	//		text-align: center
-	//		padding-top: 23px
-	//	&_lang
-	//		position: relative
-	//		margin-bottom: 130px
-	//		.mobdropdown
-	//			padding: 6px 8px
-	//		&__mobdropdown
-	//			position: absolute
-	//			left: 0
-	//			margin: 0
-	//			top: 32px
-	//			display: none
-	//			width: 100%
-	//			padding: 0
-	//			a
-	//				padding: 4px 8px
-	//				color: $text
-	//				display: block
-	//	&_social
-	//		display: flex
-	//		gap: 24px
-	//		justify-content: center
-	//	&_help
-	//		margin-bottom: 44px
-	//&-menumob
-	//	padding: 0
-	//	margin-bottom: 130px
-	//	li
-	//		margin-bottom: 30px
-	//		a
-	//			color: #000
-	//			&:hover
-	//				font-weight: 500
-	.active
-		display: block
-		color: #000
-	.arrow
-		transition: $transition
-	.rotate
-		rotate: 180deg
-		margin-top: -2px
-	.open
-		display: block
-	.menuB
+			&__network
+				display: flex
+				gap: 24px
+	&-button
+		width: 30px
+		height: 22px
+		position: relative
 		display: none
+	.dropdownbtn
+		padding: 4px 12px
 
 @media (max-width: $xl)
 	.header
-		height: 58px
-		nav
-			background: #dc3545
+		padding: 14px 18px
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background: $gray
+			z-index: 1
+		&-cont
+			height: 58px
+		&-logo
+			z-index: 2
+			img
+				width: 70px
+		&-nav
+			background: #ffffff
 			width: 100%
 			left: 0
 			top: 58px
 			height: 100%
 			position: fixed
-		&-menu
-			flex-direction: column
-			align-items: center
-	//.headernav-menu
-		&-menu
-			//display: none
+			padding-top: 64px
+			transform: translate(0, 110%)
+		.header-nav.active
+			transform: translate(0, 0)
 		&-right
-			//display: none
-		.menuB
+			justify-content: center
+			&_social
+				flex-direction: column-reverse
+				gap: 44px
+				&__network
+					&__img
+						position: relative
+						&::before
+							position: absolute
+							content: ""
+							background-image: url(../img/img99/icons/telegab.svg)
+							height: 30px
+							width: 30px
+							top: 0
+							left: 0
+						&:last-child
+							&::before
+								background-image: url(../img/img99/icons/vkb.svg)
+					//&__img
+					//	position: relative
+					//	&::before
+					//		position: absolute
+					//		content: ""
+					//		background-image: url(../img/img99/icons/vkb.svg)
+					//		height: 30px
+					//		width: 30px
+					//		top: 0
+					//		left: 0
+			&_lang
+				margin-right: 0
+				text-align: center
+				margin-bottom: 130px
+				&__dropdown
+					position: absolute
+					left: -13px
+					a
+						color: $black
+						&:hover
+							background: none
+			&_lang.active
+				display: block
+		&-button
 			display: block

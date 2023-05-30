@@ -3,7 +3,7 @@
 	background: #908A8A
 	text-align: center
 	width: 100%
-	color: #fff
+	color: $white
 	padding: 15px 0
 	transition: 0.5s
 	border: none
@@ -13,18 +13,16 @@
 		margin-right: 10px
 
 .rectangular
-	background-color: #2d3133
-	color: #fff
+	background-color: $page-bg
 	border-radius: 0
 	font-size: 14px
 	padding: 6px 26px
-	background-color: #2d3133
-	color: #fff
+	color: $white
 	border-radius: 0%
 	font-size: 14px
 	width: fit-content
 	cursor: pointer
-	border: 1px solid #2d3133
+	border: 1px solid $page-bg
 	transition: $transition
 	&:hover
 		background-color: #b69a79
@@ -33,10 +31,9 @@
 /*btnCircle*/
 .btnCircle
 	background-color: #2cbf00
-	color: #fff
+	color: $white
 	font-size: 14px
 	padding: 13px 45px
-	color: #fff
 	border-radius: 25px
 	font-size: 14px
 	width: fit-content
@@ -51,40 +48,54 @@
 		background-color: #2c8d0f
 /*btnCircle*/
 
-.dropdown
+// Выпадающий список
+.dropdownbtn
 	background: none
 	border: none
-	color: #fff
+	color: $white
+	display: flex
+	align-items: center
+	i
+		color: $white
+		margin-left: 10px
+		transition: $transition
 
-.arrow
-	margin-left: 10px
+@media (max-width: $xl)
+	//.dropdownbtn
+	//	color: $text
+	//	border-radius: 4px
+	//	position: relative
+	//	display: flex
+	//	align-items: center
+	//	padding: 0
+	//	&:hover
+	//		background: none
+	//	i
+	//		color: #000
+	//	.active
+	//		display: block
+// Выпадающий список
 
-.mobdropdown
-	background: none
-	border: none
-	color: #000000
-
-.arrowmob
-	margin-left: 10px
-
-.header-menumob
-	ul
-		padding: 0
-
-// menuB
-.menuB
+// Бургер с анимацией на закрывание
+.menubtn
 	position: relative
 	z-index: 4
-	min-width: 40px
+	width: 100%
+	background: none
+	border: none
+	width: 100%
+	height: 100%
+	display: none
 	&-line
 		content: ""
 		position: absolute
-		width: 80%
+		width: 100%
 		height: 2px
 		background-color: #ffffff
 		-webkit-transition: 0.4s
 		-o-transition: 0.4s
 		transition: 0.4s
+		left: 0
 	&-line::before
 		content: ""
 		position: absolute
@@ -95,6 +106,7 @@
 		-o-transition: 0.4s
 		transition: 0.4s
 		top: -10px
+		left: 0
 	&-line::after
 		content: ""
 		position: absolute
@@ -105,17 +117,42 @@
 		-o-transition: 0.4s
 		transition: 0.4s
 		top: 10px
+		left: 0
 
-.openclose
-	height: 0
-	transition: 0s
-	&::before
-		top: 0
-		-webkit-transform: rotate(45deg)
-		-ms-transform: rotate(45deg)
-		transform: rotate(45deg)
-	&::after
-		top: 0
-		-webkit-transform: rotate(-45deg)
-		-ms-transform: rotate(-45deg)
-// menuB
+.menubtn.active
+	.menubtn-line
+		height: 0
+		transition: 0s
+		&::before
+			top: 0
+			-webkit-transform: rotate(45deg)
+			-ms-transform: rotate(45deg)
+			transform: rotate(45deg)
+		&::after
+			top: 0
+			-webkit-transform: rotate(-45deg)
+			-ms-transform: rotate(-45deg)
+
+@media (max-width: $xl)
+	.menubtn
+		display: block
+// Бургер с анимацией на закрывание
+
+// Красная кнопка
+.btnRed
+	color: #fff
+	background: #E82424
+	border-radius: 8px
+	padding: 13px 26px
+	font-weight: $semiBold
+	font-size: 18px
+	&:hover
+		box-shadow: $box-shadow
+		color: #fff
+		background: #be1d1d
+// Красная кнопка
+
+// Наложение картинки на картинку 
+@media (max-width: $xl)
+
+// Наложение картинки на картинку 

@@ -36,3 +36,67 @@
 				ul
 					font-size: 14px
 					gap: 5px
+
+// Аккордион
+.accordion
+	&-list
+		width: 100%
+		padding: 0
+		margin: 0
+		overflow: hidden
+		max-height: 0
+		transition: 0.5s
+		a
+			color: $white
+			display: block
+			padding-top: 8px
+			text-align: left
+			padding: 4px 12px
+			&:hover
+				background: $grayHover
+.dropdown
+	position: relative
+	width: 68px
+	min-height: 28px
+	margin: 0 auto
+	background: $gray
+	border-radius: 4px
+	&-cont
+		position: absolute
+		height: auto
+		width: 100%
+		left: 0
+		top: 0
+		overflow: hidden
+		border-radius: 4px
+		background: $gray
+		border: 1px solid $gray
+		&:hover
+			background: $grayH
+
+.dropdown.active
+	.dropdown-cont
+		background: $grayH
+	.fa-chevron-down
+		transform: rotate(180deg)
+	.accordion
+		&-list
+			max-height: 100px
+
+@media (max-width: $xl)
+	.dropdown-cont
+		background: $white
+		color: $black
+		&:hover
+			background: $white
+		.dropdownbtn
+			color: $black
+			i
+				color: $black
+	.accordion
+		&-list
+			a
+				color: $black
+	.dropdown.active
+		.dropdown-cont
+			background: $white

@@ -2,10 +2,14 @@ mixin section(name, arr)
 	if name == ''
 		each item in arr
 			if item.href
-				a(class=`btnImg99 ${item.class}` href=item.href)
+				a(class=item.class href=item.href)
 					if item.imgL
 						img(src=item.imgL, alt="")
+					if item.faL
+						i(class=item.faL)
 					=item.text
+					if item.faR
+						i(class=item.faR)
 					if item.imgR
 						img(src=item.imgR, alt="")
 			if !item.href
@@ -15,11 +19,11 @@ mixin section(name, arr)
 					if item.faL
 						i(class=item.faL)
 					=item.text
-					if item.arrow
-						img(src=item.arrow, alt="", class=`${item.arrowClass}`)
+					if item.faR
+						i(class=item.faR)
 					if item.imgR
 						img(src=item.imgR, alt="")
-	if name == 'menuB'
+	if name == 'menubtn'
 		each item in arr
-			.menuB
-				span.menuB-line
+			button.menubtn
+				span.menubtn-line

@@ -1,4 +1,13 @@
 .bgHoverGray
 	&:hover
-		background: $gray
+		background: #272727
 		border-radius: 4px
+
+@media (max-width: $xl)
+	.bgHoverGray
+		&:hover
+			background: none
+
+.rotate
+	rotate: 180deg
+	margin-top: -2px
