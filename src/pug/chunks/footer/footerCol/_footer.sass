@@ -1,111 +1,115 @@
 .footer
-	background: rgba(57, 63, 67, 1)
-	//margin-top: 2000px
-	&-cooper
-		&_up
-			ul
-				margin-bottom: 100px
-				padding: 40px 0 0 0
-				li
-					font-size: 18px
-					font-weight: 400
-					color: #fff
-		&_down
-			display: flex
-			ul
-				display: flex
-				padding: 0
-				li
-					font-size: 18px
-					font-weight: 400
-					color: #fff
-					margin-right: 40px
-					a
-						color: #fff
+	background: $gray
+	padding: 26px 0 16px 0
+	&-converted
+		&_title
+			color: $white
+			font-size: 14px
+			font-weight: 400
+		&_subtitle
+			font-size: 35px
+			font-weight: 700
+			color: $white
+	&-all
+		display: flex
+		justify-content: space-around
+	&-menu
+		.menu-line
+			flex-direction: column
+			a
+				font-size: 14px
+				font-weight: 400
 	&-about
-		&_up
-			ul
-				margin-bottom: 100px
-				padding: 40px 0 0 0
-				li
-					font-size: 18px
-					font-weight: 400
-					color: #fff
-		&_down
-			display: flex
-			ul
-				display: flex
-				padding: 0
-				li
-					font-size: 18px
-					font-weight: 400
-					color: #fff
-					margin-right: 40px
-					a
-						color: #fff
+		margin-bottom: 18px
+		a
+			color: $white
+			font-size: 14px
+			font-weight: 400
+			&:hover
+				font-weight: 600
+	&-support
+		margin-bottom: 40px
+		a
+			color: $white
+			font-size: 14px
+			font-weight: 400
+			position: relative
+			&:hover
+				font-weight: 600
+				transition: 0
+			&::after
+				content: ''
+				position: absolute
+				background-image: url(../img/img99/svg/arrowfooter.svg)
+				width: 34px
+				height: 34px
+				background-repeat: no-repeat
+				top: 4px
+				right: -60px
+	&-network
+		display: flex
+		gap: 24px
+	&-protect
+		&_logo
+			margin-bottom: 30px
+		&_title
+			font-size: 14px
+			font-weight: 700
+			color: $white
+		&_subtitle
+			font-size: 12px
+			font-weight: 400
+			color: $white
+	&-privace
+		display: flex
+		justify-content: space-between
+		border-top: 0.5px solid #FFFFFF33
+		padding-top: 10px
+		margin-top: 80px
+		&_left
+			color: #FFFFFF80
+			font-size: 12px
+			font-weight: 400
+			span
+				color: $white
 		&_right
-			ul
-				display: flex
-				padding: 0
-				li
-					font-size: 18px
-					font-weight: 400
-					margin-left: 60px
-					color: #fff
-	&-capsules
-		&_up
-			ul
-				margin-bottom: 100px
-				padding: 40px 0 0 0
-				li
-					font-size: 18px
-					font-weight: 400
-					color: #fff
+			gap: 30px
+			display: flex
+			justify-content: end
+			a
+				color: #FFFFFF80
+				font-size: 12px
+				font-weight: 400
+				text-decoration-line: underline
+				&:hover
+					color: $white
 
-@media (max-width: 770px)
+@media (max-width: $xl)
 	.footer
-		&-cooper
-			&_up
-				ul
-					margin-bottom: 30px
-					padding-top: 20px
-					li
-						font-size: 14px
-			&_down
-				flex-direction: column
-				text-align: center
-				padding-bottom: 10px
-				ul
-					margin-bottom: 10px
-					li
-						margin: 0 10px
-						font-size: 14px
-						&:first-child
-							margin-left: 0
-		&-about
-			&_up
-				ul
-					margin-bottom: 30px
-					padding-top: 20px
-					li
-						font-size: 14px
-			&_down
-				flex-direction: column
-				text-align: center
-				padding-bottom: 10px
-				ul
-					margin-bottom: 10px
-					li
-						margin: 0 10px
-						font-size: 14px
-						&:first-child
-							margin-left: 0
-		&-about
-			//
-		&-capsules
-			&_up
-				ul
-					margin-bottom: 30px
-					padding-top: 20px
-					li
-						font-size: 14px
+		&-protect
+			margin-bottom: 50px
+		&-converted
+			margin-bottom: 50px
+			&_title
+				margin-bottom: 20px
+		&-all
+			justify-content: space-between
+		&-menu
+			.menu-line
+				gap: 18px
+				a
+					color: $white
+					&::before
+						display: none
+		&-support
+			margin-bottom: 18px
+		&-network
+			.header-right_social__network__img
+				&::before
+					display: none
+		&-privace
+			margin-top: 0
+			flex-direction: column
+			&_right
+				justify-content: start
+				margin-top: 16px

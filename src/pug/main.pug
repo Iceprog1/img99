@@ -68,5 +68,20 @@ mixin menu(name = '', arr = [{}], param)
 		include chunks/menu/img99/_menu
 		+section(name, arr, param)
 
+//-img
+mixin img(name = '', arr = [{}], param)
+	if true
+		include chunks/img/_img
+		+section(name, arr)
 
+//-logo
+mixin logo(name = '', arr = [{}], param)
+	if true
+		include chunks/logo/_logo
+		+section(name, arr)
 
+//-loading
+mixin loading(name = '', arr = [{}], param)
+	if true
+		include chunks/loading/_loadingState
+		+section(name, arr)

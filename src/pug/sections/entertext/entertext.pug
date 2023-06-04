@@ -1,0 +1,42 @@
+mixin entertext(arr)
+	each item in arr
+		section.entertext
+			.container
+				.entertext-cont
+					.entertext-title
+						+btn('', [
+							{
+								'class': 'btnRed entertextBtn',
+								'href': '#',
+								'imgR': '@img/img99/sections/entertext/arrow.svg'
+							}
+						])
+						=item.text
+					.row
+						.col-md-7
+							.entertext-left
+								.entertext-left_bnts
+									+btn('', [
+										{
+											'class': 'btnRed leftBtn',
+											'text': 'Текст',
+											'href': '#',
+										}
+									])
+									+btn('', [
+										{
+											'class': 'btnRed leftBtn',
+											'text': 'Логотип',
+											'href': '#',
+										}
+									])
+								.entertext-left_colors
+									.entertext-left_colors__left
+										if item.img
+										.entertext-left_colors__left__image
+											img(src=item.img alt='')
+
+
+
+
+

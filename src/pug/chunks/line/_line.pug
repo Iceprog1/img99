@@ -11,3 +11,30 @@ mixin section(name, arr)
 			.lineLeftRightElement
 				.lineLeftRightElement-title Здравствуйте, Адам Адамов!
 				a(href="#")  Выход
+	if name == 'lineState'
+		each item in arr
+			.lineState
+				.col-md-10
+					.lineState-left
+						.col-md-7
+							.lineState-left_file
+								i.fas.fa-image
+								span=item.text
+						.col-md-3
+							if !item.state
+								+loading('', [{
+									text: 'Загружен',
+									imgLoade: '@img/img99/sections/apply/basket.svg'
+								}])
+							if item.state == 'load'
+								+loading('load', [{
+									text: 'Загружается'
+								}])
+							if item.state == 'error'
+								+loading('error', [{
+									text: 'Ошибка',
+									imgBasket: '@img/img99/sections/apply/basket.svg',
+									imgLoad: '@img/img99/sections/apply/load.svg'
+								}])
+				.col-md-2
+					.lineState-left_mbit 13.4 МБ

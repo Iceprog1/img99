@@ -1,0 +1,22 @@
+mixin section(name, arr)
+	if name == ''
+		each item in arr
+			.loading
+				.loading-text=item.text
+				button
+					img(src=item.imgLoade alt='')
+	if name == 'load'
+		each item in arr
+			.loading.loading--load
+				.sk-circle
+					- let n = 1;
+					while n < 12
+						div(class=`sk-circle${n++} sk-child`)
+				=item.text
+	if name == 'error'
+		each item in arr
+			.loading
+				.loading-error=item.text
+				button.loading-error_btn
+					img(src=item.imgBasket alt='')
+					img(src=item.imgLoad alt='')

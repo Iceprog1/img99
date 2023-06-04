@@ -2,8 +2,10 @@ header.header
 	.container
 		.header-cont
 			.header-logo
-				a(href="#")
-					img(src="@img/img99/svg/logo.svg" alt="")
+				+logo('', [{
+					href: '#',
+					img: '@img/img99/svg/logo.svg'
+				}])
 			nav.header-nav
 				+menu(
 					'', 
@@ -40,7 +42,6 @@ header.header
 						+btn('', [
 							{
 								'class': 'header-right_social__network__img',
-								'text': '',
 								'imgL': '@img/img99/icons/telega.svg',
 								'href': '#'
 							}
@@ -48,7 +49,6 @@ header.header
 						+btn('', [
 							{
 								'class': 'header-right_social__network__img',
-								'text': '',
 								'imgL': '@img/img99/icons/vk.svg',
 								'href': '#'
 							}
@@ -57,7 +57,6 @@ header.header
 						{
 							'class': 'btnRed',
 							'text': 'Помочь проекту',
-							'imgL': '',
 							'href': '#'
 						}
 						])

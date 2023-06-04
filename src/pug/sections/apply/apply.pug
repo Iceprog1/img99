@@ -1,0 +1,38 @@
+mixin apply(arr)
+	each item in arr
+		section.apply
+			.container
+				.apply-cont
+					.apply-title=item.title
+					.row 
+						+line('lineState', [{
+							text: 'Название файла',
+						}])
+					.row
+						+line('lineState', [{
+							text: 'Название файла',
+							state: 'load'
+						}])
+					.row
+						+line('lineState', [{
+							text: 'Название файла',
+							state: 'error'
+						}])
+					.row
+						.apply-btns
+							+btn('', [
+							{
+								'class': 'btnRed applyBtn',
+								'text': 'Добавить еще',
+								'href': '#',
+								'imgR': '@img/img99/sections/apply/btn.svg'
+							}
+							])
+							+btn('', [
+							{
+								'class': 'btnRed chooseBtn',
+								'text': 'Нанести водяной знак',
+								'href': '#',
+								'imgR': '@img/img99/sections/apply/arrow.svg'
+							}
+							])

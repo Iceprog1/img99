@@ -1,0 +1,50 @@
+mixin support(arr)
+	section.support
+		.container 
+			.support-cont
+				.support-head=arr.title
+				.support-content
+					.row
+						.col-md-8.support-content-left
+							.support-content_left__subtitle
+								=arr.subtitle
+							.support-content_left__btns
+								+btn('', [
+									{
+										'class': 'btnRed',
+										'text': '98Р',
+										'href': '#'
+									}
+								])
+								+btn('', [
+									{
+										'class': 'btnRed',
+										'text': '294 Р',
+										'href': '#'
+									}
+								])
+								+btn('', [
+									{
+										'class': 'btnRed',
+										'text': 'Другая сумма',
+										'href': '#'
+									}
+								])
+							.support-content_left__images
+								+img('', [{
+									img: '@img/img99/sections/support/visa.png'
+								}])
+								+img('', [{
+									img: '@img/img99/sections/support/master.png'
+								}])
+								+img('', [{
+									img: '@img/img99/sections/support/qiwi.png'
+								}])
+								+img('', [{
+									img: '@img/img99/sections/support/mir.png'
+								}])
+						.col-md-4.support-content-right
+							+img('', [{
+								img: '@img/img99/sections/support/qr-code.jpg'
+								}])
+							=arr.text

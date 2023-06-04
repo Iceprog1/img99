@@ -1,0 +1,46 @@
+.apply
+	margin-bottom: 60px
+	&-cont
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
+		border-radius: 20px
+		padding: 44px 80px 50px 80px
+	&-title
+		font-size: 24px
+		font-weight: 700
+		margin-bottom: 32px
+		&_mbit
+			text-align: right
+			color: #00000099
+			font-size: 18px
+			font-weight: 500
+	&-btns
+		display: flex
+		justify-content: space-between
+		margin-top: 38px
+		align-items: center
+		.applyBtn
+			background: none !important
+			border: 2px solid #D9D9D9
+			color: #D9D9D9 !important
+			gap: 10px
+			display: flex
+			&:hover
+				border: 2px solid #E82424
+		.chooseBtn
+			display: flex
+			gap: 10px
+			img
+				width: 35px
+
+@media (max-width: $xl)
+	.apply
+		&-cont
+			padding: 30px 14px 24px 20px
+		&-btns
+			flex-direction: column
+			.applyBtn
+				width: 100%
+				justify-content: center
+				margin-bottom: 20px
+			.chooseBtn
+				width: 100%

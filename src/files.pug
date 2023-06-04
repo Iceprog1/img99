@@ -1,0 +1,31 @@
+extends pug/base/base
+
+block main
+
+	include pug/sections/advertising/advertising
+	+advertising([{
+		img: '@img/img99/sections/adven/up.jpg'
+	}])
+
+	include pug/sections/online/online
+	+online({
+		title: 'Онлайн сервис создания водяных знаков',
+		subtitle: 'Сервис позволяет, добавить водяной знак на фотографии, тем самым вы защищаете ваши фото водяным знаком быстро, легко, бесплатно и онлайн.'
+	})
+
+	include pug/sections/apply/apply
+	+apply([{
+		title: 'Файлы'
+	}])
+
+	include pug/sections/support/support
+	+support({
+		title: 'Поддержите наш проект',
+		subtitle: 'Друзья! Мы хотим чтобы наш сайт был бесплатным. Не хотим подключать личный кабинет и брать за это плату. Но для поддержания и развития необходимы средства. Будем признательны за любой денежный вклад от 5 рублей до 1 000 000 $ ;) →',
+		text: 'или сканируйте QR код'
+	})
+
+	include pug/sections/advertising/advertising
+	+advertising([{
+		img: '@img/img99/sections/adven/down.jpg'
+	}])

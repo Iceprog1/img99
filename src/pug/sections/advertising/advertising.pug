@@ -1,0 +1,10 @@
+mixin advertising(arr)
+	each item in arr
+		section.advertising
+			.container
+				.advertising-cont
+					.row
+						.col-md-12
+							if item.img
+							.advertising-image
+								img(src=item.img alt='')

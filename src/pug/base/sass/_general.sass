@@ -1,7 +1,7 @@
 *
 	margin: 0
 	padding: 0
-	color: #222
+	color: $black
 	box-sizing: border-box
 	//ползунок
 	&::-webkit-scrollbar
@@ -21,10 +21,17 @@ body
 	flex-direction: column
 	min-height: 100%
 
+body.active
+	overflow: hidden
+
 .content
 	flex: 1 0 auto
 	width: 100%
-	padding-top: 56px
+	padding-top: 50px
+
+@media (max-width: $xl)
+	.content
+		padding-top: 100px
 
 .container
 	max-width: 1340px

@@ -29,26 +29,25 @@ export function mouseLeave(element, removeClass = "active") {
 
 //Добавление и удаление класса у основго и выбранного элемента
 export function addRemoveClass(element, nextElem = '', addRemove = "active") {
-	let add = document.querySelector(element);
+	let clickElement = document.querySelector(element);
 	let nextEl = document.querySelector(nextElem);
 	if (addRemove[0] == '.') {
 		addRemove = addRemove.slice(1);
 	}
-	add.onclick = () => {
-		add.classList.toggle(addRemove);
+	clickElement.onclick = () => {
+		//clickElement.classList.toggle(addRemove);
 		nextEl.classList.toggle(addRemove);
+		console.log(nextEl);
+		let body = document.querySelector('body');
+		if (nextEl.classList.contains('active')) {
+			body.classList.add('active');
+		}
+		else {
+			body.classList.remove('active');
+		}
 	};
 }
 
-// Я хочу чтобы при уменьшении экрана элемент перемещался в нижнюю часть другого элемента, а при увеличении экрана чтобы данный элемент возвращался в исходное состояние
-// 1.
-//		+1.1 Переместить выбранный элемент внутрь другого элемента в его нижнюю часть
-// 		+1.2 Также мне нужна возможность при необходимости перемещать данный элемент в верхнюю часть внутри другого элемента
-//		1.3 Также нужна возможность переместить данный элемент после выбранного элемента
-// 2.
-//		2.1 При увеличении экрана вернуть элемент в исходное состояние
-
-//functions.moving('.header-right', '-.header-nav', '.span', '1140');
 
 export function movingElement(movEl, whereEl, backEl, width) {
 	//----------------------------------------------------------------------------
@@ -110,6 +109,7 @@ export function movingElement(movEl, whereEl, backEl, width) {
 				where.append(movingElement);
 			}
 		} else {
+			document.querySelector('body').classList.remove('active')
 			//----------------------------------------------------------------------------
 			// Переменные
 			let backElement = document.querySelector(backElRemove);

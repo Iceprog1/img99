@@ -1,0 +1,46 @@
+.support
+	margin-bottom: 60px
+	&-head
+		font-size: 24px
+		font-weight: 600
+		background: #F0F0F0
+		padding: 24px 28px
+		border-radius: 20px 20px 0px 0px
+	&-content
+		padding: 30px 24px 26px 24px
+		border: 1px solid #F0F0F0
+		border-radius: 0px 0px 20px 20px
+		&_left
+			&__subtitle
+				font-size: 18px
+				font-weight: 400
+			&__btns
+				margin: 36px 0 36px 0
+				display: flex
+				gap: 18px
+			&__images
+				align-items: center
+				display: flex
+				gap: 20px
+		&-right
+			display: flex
+			flex-direction: column
+			align-items: end
+			border-left: 1px solid #00000033
+
+@media (max-width: $xl)
+	.support
+		text-align: center
+		&-head
+			font-size: 20px
+		&-content
+			&-right
+				display: none
+			&_left
+				&__btns
+					justify-content: center
+					flex-wrap: wrap
+					&:last-child
+						width: 300px
+				&__images
+					justify-content: center

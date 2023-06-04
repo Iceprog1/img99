@@ -1,0 +1,15 @@
+mixin choosefile(arr)
+	section.choosefile
+		.container
+			.choosefile-cont
+				.choosefile-header!=arr.text
+				.choosefile-content
+					+btn('', [
+						{
+							'class': 'btnRed chooseBtn',
+							'text': 'Выберите файл',
+							'href': '#',
+							'imgR': '@img/img99/svg/choosefile.svg'
+						}
+					])
+					=arr.btntext

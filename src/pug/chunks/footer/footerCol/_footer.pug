@@ -1,35 +1,72 @@
 footer.footer
 	.container
-		.row 
-			.footer-cooper.col-md-5 
-				.footer-cooper_up 
-					ul
-						li Сотрудничество 
-				.footer-cooper_down
-					ul 
-						li Контакты:
-						li 
-							a(href="#")
-								img(src="../img/socialmedia/Telegram 1.png" alt="#")
-						li 
-							a(href="#")
-								img(src="../img/socialmedia/watsapp.png" alt="#") 
-						li 
-							a(href="#") 8(812) 415-82-77
-			.footer-about.col-md-6
-				.footer-about_up 
-					ul
-						li О нас
-				.footer-about_down
-					ul 
-						li Присоединяйтесь: 
-						li 
-							a(href="#")
-								img(src="../img/socialmedia/insta.png" alt="#")
-						li 
-							a(href="#")
-								img(src="../img/socialmedia/Telegram 1.png" alt="#")
-			.footer-capsules.col-md-1
-				.footer-capsules_up 
-					ul
-						li Капсулы
+		.footer-cont
+			.row
+				.col-md-4
+					.footer-converted
+						.footer-converted_title Сконвертированные файлы
+						.footer-converted_subtitle 2, 008, 852, 032
+				.col-md-6
+					.footer-all
+						.col-md-3
+							.footer-menu
+								+menu(
+									'', 
+									[
+									{
+										href: '#',
+										text: 'Конвертация'
+									},
+									{
+										href: '#',
+										text: 'Водяной знак'
+									},
+									{
+										href: '#',
+										text: 'Сжатие'
+									}
+									],
+									{
+										class: 'menu-line'
+									}
+								)
+						.col-md-3
+							.footer-middle
+								.footer-about
+									a(href="#") О нас
+								.footer-support
+									a(href="#") Связаться с поддержкой
+								.footer-network
+									+btn('', [
+										{
+											'class': 'header-right_social__network__img',
+											'imgL': '@img/img99/icons/telega.svg',
+											'href': '#'
+										}
+										])
+									+btn('', [
+										{
+											'class': 'header-right_social__network__img',
+											'imgL': '@img/img99/icons/vk.svg',
+											'href': '#'
+										}
+										])
+				.col-md-2.footer-protect_cont
+					.footer-protect
+						.footer-protect_logo
+							+logo('', [{
+								href: '#',
+								img: '@img/img99/svg/logo.svg'
+							}])
+						.footer-protect_title Защити свое, родное
+						.footer-protect_subtitle Сделано в 2014 г. в России для всего мира
+			.row
+				.footer-privace
+					.col-md-6
+						.footer-privace_left © 2023 img99 <span>Все права защищены.</span>
+					.col-md-4
+						.footer-privace_right
+							a(href="#") Terms of Use 
+							a(href="#") Privacy Policy
+
+
