@@ -12,29 +12,45 @@ mixin entertext(arr)
 							}
 						])
 						=item.text
+					.entertext-subtitle 
+						.entertext-subtitle_bnts
+							+btn('', [
+								{
+									'class': 'btnRed leftBtn',
+									'text': 'Текст',
+									'href': '#',
+								}
+							])
+							+btn('', [
+								{
+									'class': 'btnRed leftBtn',
+									'text': 'Логотип',
+									'href': '#',
+								}
+							])
 					.row
-						.col-md-7
+						.col-md-7.df
 							.entertext-left
-								.entertext-left_bnts
-									+btn('', [
-										{
-											'class': 'btnRed leftBtn',
-											'text': 'Текст',
-											'href': '#',
-										}
-									])
-									+btn('', [
-										{
-											'class': 'btnRed leftBtn',
-											'text': 'Логотип',
-											'href': '#',
-										}
-									])
 								.entertext-left_colors
 									.entertext-left_colors__left
 										if item.img
 										.entertext-left_colors__left__image
 											img(src=item.img alt='')
+								.entertext-left_colorpicker
+									+colorpicker('')
+							.entertext-right
+								.entertext-right_input
+									input(type="text" name="" placeholder="Введите текст")
+									input(type="text" name="" placeholder="Введите текст")
+								.entertext-right_checkbox
+									+checkbox('')
+								.entertext-right_range
+									+input('rangeInput', [{
+										title: 'Отступ между текстом:',
+										class: 'number',
+										rangeClass: 'range'
+									}])
+
 
 
 

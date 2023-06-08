@@ -1,0 +1,69 @@
+#color-picker
+	margin: 25px auto
+
+#color-values
+	display: block
+	list-style: none
+	color: #222
+	float: left
+	margin: 0 0 0 8px
+	padding: 5px
+	text-align: left
+
+#pcr_bg
+	height: 135px
+
+.picker-wrapper,
+.pcr-wrapper
+	position: relative
+	float: left
+
+.picker-indicator,
+.pcr-indicator
+	position: absolute
+	left: 0
+	top: 0
+
+.picker, .pcr
+	cursor: crosshair
+	float: left
+
+.cp-default .picker
+	width: 200px
+	height: 200px
+
+.cp-default .pcr
+	width: 14px
+	height: 200px
+	&-wrapper
+		margin-left: 16px
+
+svg
+	border-radius: 4px
+
+label
+	font-size: 16px
+	font-weight: 500
+
+.cp-default .picker-indicator
+	width: 18px
+	height: 18px
+	background: #1708FF
+	border-radius: 50%
+	border: 4px solid $white
+
+.cp-default .pcr-indicator
+	width: 32px
+	height: 16px
+	background: #1708FF
+	border-radius: 8px
+	border: 4px solid $white
+	left: -8px
+
+#hex
+	border: 1px solid #D2D2D2
+	border-radius: 8px
+	margin-left: 14px
+	padding: 6px 8px
+	font-size: 14px
+	font-weight: 300

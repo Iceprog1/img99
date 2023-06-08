@@ -15,7 +15,7 @@
 			background: #CCCCCC
 			padding: 4px 22px
 			border-radius: 4px
-	&-left
+	&-subtitle
 		&_bnts
 			display: flex
 			gap: 20px
@@ -36,3 +36,36 @@
 					background: none
 					border: 2px solid #E82424
 					color: #E82424
+	.df
+		display: flex
+	&-right
+		margin-left: 34px
+		&_input
+			margin-bottom: 20px
+			input
+				border: 1px solid #D2D2D2
+				border-radius: 8px
+				padding: 10px
+				&:focus
+					outline-color: #E82424
+				&::placeholder
+					font-size: 14px
+					font-weight: 300
+					color: #00000099
+		&_checkbox
+			display: flex
+			align-items: center
+			margin-bottom: 44px
+			.checkboxSquare
+				border: none
+				border-radius: 4px
+				border: 1px solid #D2D2D2
+				&:checked
+					&::after
+						content: url(../img/img99/sections/entertext/checked.svg)
+						background: #626870
+						height: 100%
+			.l
+				margin-left: 6px
+				font-size: 14px
+				font-weight: 500

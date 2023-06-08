@@ -85,3 +85,9 @@ mixin loading(name = '', arr = [{}], param)
 	if true
 		include chunks/loading/_loadingState
 		+section(name, arr)
+
+//-colorpicker
+mixin colorpicker(name)
+	if true
+		include chunks/colorpicker/_colorpicker
+		+section(name, arr)
