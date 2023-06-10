@@ -1,48 +1,150 @@
-.bottomLine
-	width: 100%
-	border: none
-	border-bottom: 1px solid #000
-	padding-bottom: 10px
-	margin-bottom: 40px
-	&:focus
+//.bottomLine
+//	width: 100%
+//	border: none
+//	border-bottom: 1px solid #000
+//	padding-bottom: 10px
+//	margin-bottom: 40px
+//	&:focus
+//		outline: none
+//		&::placeholder
+//			font-size: 14px
+
+////Квадратный инпут с внутренней тенью
+///*squareShadow*/
+//.squareShadowLabel
+//	display: flex
+//	flex-direction: column
+//.squareShadow
+//	padding: 8px 70px 8px 20px
+//	background: #00000000
+//	border-radius: 8px
+//	font-size: 16px
+//	font-weight: 400
+//	line-height: 20px
+//	color: #000
+//	outline: none
+//	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0), inset 0px 4px 7px 0px rgba(0, 4, 7, 0.2)
+//	border: 1px solid #d5d5d599 !important
+//	margin-bottom: 10px
+//	width: 100%
+//	background: #fff
+///*squareShadow*/
+
+////rangeInput
+
+//.number
+//	display: flex
+//	justify-content: space-between
+//	color: #000
+//	font-size: 16px
+//	font-weight: 600
+//	align-items: center
+//	margin-bottom: 10px
+//	span
+//		border: 1px solid #D2D2D2
+//		border-radius: 8px
+//		text-align: center
+//		color: #00000099
+//		padding: 6px 14px
+
+//.range
+//	display: flex
+//	width: 600px
+//	&__slider
+//		width: 45%
+//	&__value
+//		width: 35%
+//		margin-left: 45px
+//		text-align: center
+//		border-left: #e6e4e4 1px solid
+
+//.form-group
+//	display: flex
+//	flex-direction: column
+//	justify-content: center
+//	label
+//		text-transform: uppercase
+//		font-size: .7rem
+//		color: #222
+//		margin-bottom: 5px
+//	span
+//		font-size: 2rem
+//		font-weight: 600
+//		color: #3c3b3b
+
+//.range
+//	&__slider label
+//		margin-bottom: 10px
+
+//.range
+//	&__slider
+//input
+//	width: 100%
+//	-webkit-appearance: none
+//	height: 13px
+//	border-radius: 6px
+//	background: #D9D9D9
+//	outline: none
+//	padding: 0
+//	margin: 0
+//	&::-webkit-slider-thumb
+//		-webkit-appearance: none
+//		appearance: none
+//		width: 25px
+//		height: 25px
+//		border-radius: 50%
+//		background: #fff
+//		border: #626870 5px solid
+//		cursor: pointer
+//		-webkit-transition: background .15s ease-in-out
+//		transition: background .15s ease-in-out
+//		background: linear-gradient(to right, #626870, #626870 ' + percentage + '%, #d3edff ' + percentage + '%, #dee1e2 100%)
+//		&::-moz-range-thumb
+//			width: 20px
+//			height: 20px
+//			border: 0
+//			border-radius: 50%
+//			background: #fff
+//			border: #626870 5px solid
+//			cursor: pointer
+//			-webkit-transition: background .15s ease-in-out
+//			transition: background .15s ease-in-out
+//			&::-moz-range-thumb:hover
+//				background: #f9ca24
+
+//input::-moz-focus-inner, input::-moz-focus-outer
+//	border: 0
+
+.range
+	&-input
+		width: 100%
+		-webkit-appearance: none
+		height: 8px
+		border-radius: 2px
+		background: #D9D9D9
 		outline: none
-		&::placeholder
-			font-size: 14px
-
-//Квадратный инпут с внутренней тенью
-/*squareShadow*/
-.squareShadowLabel
-	display: flex
-	flex-direction: column
-.squareShadow
-	padding: 8px 70px 8px 20px
-	background: #00000000
-	border-radius: 8px
-	font-size: 16px
-	font-weight: 400
-	line-height: 20px
-	color: #000
-	outline: none
-	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0), inset 0px 4px 7px 0px rgba(0, 4, 7, 0.2)
-	border: 1px solid #d5d5d599 !important
-	margin-bottom: 10px
-	width: 100%
-	background: #fff
-/*squareShadow*/
-
-//rangeInput
-
-.number
-	display: flex
-	justify-content: space-between
-	color: #000
-	font-size: 16px
-	font-weight: 600
-	align-items: center
-	margin-bottom: 10px
-	span
-		border: 1px solid #D2D2D2
-		border-radius: 8px
-		text-align: center
-		color: #00000099
-		padding: 6px 14px
+		padding: 0
+		margin: 0
+		&::-webkit-slider-thumb
+			-webkit-appearance: none
+			appearance: none
+			width: 22px
+			height: 22px
+			border-radius: 50%
+			background: #fff
+			border: #626870 5px solid
+			cursor: pointer
+			-webkit-transition: background .15s ease-in-out
+			transition: background .15s ease-in-out
+			&::-moz-range-thumb
+				width: 20px
+				height: 20px
+				border: 0
+				border-radius: 50%
+				background: #fff
+				border: #626870 5px solid
+				cursor: pointer
+				-webkit-transition: background .15s ease-in-out
+				transition: background .15s ease-in-out
+			&::-moz-range-thumb:hover
+				background: #f9ca24

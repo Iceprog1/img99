@@ -41,14 +41,35 @@ mixin entertext(arr)
 							.entertext-right
 								.entertext-right_input
 									input(type="text" name="" placeholder="Введите текст")
-									input(type="text" name="" placeholder="Введите текст")
+									+accordion('default', [{
+										btnText: 'Выберите шрифт'
+									}])
 								.entertext-right_checkbox
 									+checkbox('')
 								.entertext-right_range
 									+input('rangeInput', [{
 										title: 'Отступ между текстом:',
-										class: 'number',
-										rangeClass: 'range'
+										min: '0',
+										max: '100',
+										value: '16'
+									}])
+									+input('rangeInput', [{
+										title: 'Размер шрифта:',
+										min: '0',
+										max: '100',
+										value: '16'
+									}])
+									+input('rangeInput', [{
+										title: 'Прозрачность шрифта:',
+										min: '0',
+										max: '100',
+										value: '16'
+									}])
+									+input('rangeInput', [{
+										title: 'Угол наклона шрифта:',
+										min: '0',
+										max: '100',
+										value: '16'
 									}])
 
 

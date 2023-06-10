@@ -5,7 +5,7 @@ functions.mouseLeave('.dropdown');
 
 functions.movingElement('.header-right', '.header-nav', '.header-nav', '1140');
 
-functions.addRemoveClass('.dropdownbtn', '.dropdown');
+//functions.addRemoveClass('.dropdownbtn', '.dropdown');
 
 functions.addRemoveClass('.menubtn', '.header');
 
