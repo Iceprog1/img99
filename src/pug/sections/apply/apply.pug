@@ -1,23 +1,18 @@
-mixin apply(arr)
-	each item in arr
-		section.apply
-			.container
-				.apply-cont
-					.apply-title=item.title
-					.row 
-						+line('lineState', [{
-							text: 'Название файла',
-						}])
+mixin section(arr, applyTitle, buttons, name)
+	section.apply
+		.container
+			.apply-cont
+				.apply-title=applyTitle
+				each item in arr
 					.row
-						+line('lineState', [{
-							text: 'Название файла',
-							state: 'load'
+						+line(name, [{
+							text: item.text,
+							state: item.state,
+							mb: item.mb,
+							title: item.title,
+							format: item.format
 						}])
-					.row
-						+line('lineState', [{
-							text: 'Название файла',
-							state: 'error'
-						}])
+				if buttons
 					.row
 						.apply-btns
 							+btn('', [

@@ -91,3 +91,10 @@ mixin colorpicker(name)
 	if true
 		include chunks/colorpicker/_colorpicker
 		+section(name, arr)
+
+//-sections ---------------------------------------------------------
+mixin apply(arr, applyTitle, buttons, name)
+	if true
+		include sections/apply/apply
+		+section(arr, applyTitle, buttons, name)
+

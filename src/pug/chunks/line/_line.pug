@@ -23,18 +23,57 @@ mixin section(name, arr)
 						.col-md-3
 							if !item.state
 								+loading('', [{
-									text: 'Загружен',
+									title: item.title,
 									imgLoade: '@img/img99/sections/apply/basket.svg'
 								}])
 							if item.state == 'load'
 								+loading('load', [{
-									text: 'Загружается'
+									title: item.title
 								}])
 							if item.state == 'error'
 								+loading('error', [{
-									text: 'Ошибка',
+									title: item.title,
 									imgBasket: '@img/img99/sections/apply/basket.svg',
 									imgLoad: '@img/img99/sections/apply/load.svg'
 								}])
 				.col-md-2
-					.lineState-left_mbit 13.4 МБ
+					.lineState-left_mbit=item.mb
+	if name == 'lineStateMini'
+		each item in arr
+			.lineStateMini
+				.col-md-9.lineStateMini-left
+					.col-md-7
+						.lineStateMini-left_file
+							i.fas.fa-image
+							span=item.text
+					.col-md-5
+						if !item.state
+							+loading('', [{
+								title: item.title,
+								imgLoade: '@img/img99/sections/apply/basket.svg'
+							}])
+						if item.state == 'load'
+							+loading('load', [{
+								title: item.title
+							}])
+						if item.state == 'error'
+							+loading('error', [{
+								title: item.title,
+								imgBasket: '@img/img99/sections/apply/basket.svg',
+								imgLoad: '@img/img99/sections/apply/load.svg'
+							}])
+				.col-md-3.lineStateMini-right
+					.col-md-6
+						.lineStateMini-right_mbit
+							p=item.format
+							p=item.mb
+					.col-md-6
+						.lineStateMini-right_download
+							+btn('', [
+								{
+									'class': 'btnRed applyBtn',
+									'text': '',
+									'href': '#',
+									'imgR': '@img/img99/sections/entertext/download.svg'
+								}
+								])

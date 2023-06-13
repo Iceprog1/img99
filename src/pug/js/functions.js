@@ -29,11 +29,24 @@ export function mouseLeave(element, removeClass = "active") {
 
 //Добавление и удаление класса у основго и выбранного элемента
 export function addRemoveClass(element, nextElem = '', addRemove = "active") {
-	let clickElement = document.querySelector(element);
+	// Переменные
+	let clickElement = document.querySelectorAll(element);
 	let nextEl = document.querySelector(nextElem);
+	// Если есть точка то удалеям ее 
 	if (addRemove[0] == '.') {
 		addRemove = addRemove.slice(1);
 	}
+
+	// Проходимся по каждому элементу
+	for (let i = 0; i < clickElement.length; i++) {
+		// Делаем клик по текущему элементу
+		clickElement[i].onclick = () => {
+			// Добавляет или удаляет класс active
+			nextEl.classList.toggle(addRemove);
+			console.log(111);
+		}
+	}
+
 	clickElement.onclick = () => {
 		//clickElement.classList.toggle(addRemove);
 		nextEl.classList.toggle(addRemove);

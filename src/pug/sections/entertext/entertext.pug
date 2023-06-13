@@ -28,52 +28,87 @@ mixin entertext(arr)
 									'href': '#',
 								}
 							])
-					.row
-						.col-md-7.df
-							.entertext-left
-								.entertext-left_colors
-									.entertext-left_colors__left
-										if item.img
-										.entertext-left_colors__left__image
-											img(src=item.img alt='')
-								.entertext-left_colorpicker
-									+colorpicker('')
-							.entertext-right
-								.entertext-right_input
-									input(type="text" name="" placeholder="Введите текст")
-									+accordion('default', [{
-										btnText: 'Выберите шрифт'
-									}])
-								.entertext-right_checkbox
-									+checkbox('')
-								.entertext-right_range
-									+input('rangeInput', [{
-										title: 'Отступ между текстом:',
-										min: '0',
-										max: '100',
-										value: '16'
-									}])
-									+input('rangeInput', [{
-										title: 'Размер шрифта:',
-										min: '0',
-										max: '100',
-										value: '16'
-									}])
-									+input('rangeInput', [{
-										title: 'Прозрачность шрифта:',
-										min: '0',
-										max: '100',
-										value: '16'
-									}])
-									+input('rangeInput', [{
-										title: 'Угол наклона шрифта:',
-										min: '0',
-										max: '100',
-										value: '16'
-									}])
-
-
-
-
+					.row.direction
+						.col-md-6
+							.entertext-display
+								.entertext-left
+									.entertext-left_colors
+										.entertext-left_colors__left
+											if item.img
+											.entertext-left_colors__left__image
+												img(src=item.img alt='')
+									.entertext-left_colorpicker
+										+colorpicker('')
+								.entertext-right
+									.entertext-right_input
+										input(type="text" name="" placeholder="Введите текст")
+										+accordion('default', [{
+											btnText: 'Выберите шрифт'
+										}])
+									.entertext-right_propagate
+										+checkbox('', [{
+											text: 'Размножить'
+										}])
+									.entertext-right_range
+										+input('rangeInput', [{
+											title: 'Отступ между текстом:',
+											min: '0',
+											max: '100',
+											value: '16'
+										}])
+										+input('rangeInput', [{
+											title: 'Размер шрифта:',
+											min: '0',
+											max: '100',
+											value: '16'
+										}])
+										+input('rangeInput', [{
+											title: 'Прозрачность шрифта:',
+											min: '0',
+											max: '100',
+											value: '16'
+										}])
+										+input('rangeInput', [{
+											title: 'Угол наклона шрифта:',
+											min: '0',
+											max: '100',
+											value: '16'
+										}])
+									.entertext-right_checkbox
+										+checkbox('', [{
+											text: 'Конвертировать'
+										}])
+										+checkbox('', [{
+											text: 'Сжать'
+										}])
+									.entertext-right_extension
+										span в
+										+accordion('default', [{
+											btnText: 'ICO'
+										}])
+							.entertext-use
+								+btn('', [
+									{
+										'class': 'btnRed gray',
+										'text': 'Применить',
+										'href': '#',
+									}
+								])
+						.col-md-6.bottom
+							.entertext-apply
+								+apply([
+									{text: 'Название файла.jpg', format: 'ICO/', mb: '13.4 МБ', title: '-13% Готов' },
+									{text: 'Название файла.jpg', state: 'load', mb: '13.4 МБ', title: 'Обработка'},
+									{text: 'Название файла.jpg', state: 'error', mb: '13.4 МБ', title: 'Ошибка'}
+								], 'Файлы', '', 'lineStateMini')
+							.entertext-download
+								+btn('', [
+									{
+										'class': 'btnRed applyBtn',
+										'text': 'Скачать все файлы',
+										'href': '#',
+										'imgR': '@img/img99/sections/entertext/download.svg'
+									}
+								])
 
 

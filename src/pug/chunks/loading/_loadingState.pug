@@ -2,7 +2,7 @@ mixin section(name, arr)
 	if name == ''
 		each item in arr
 			.loading
-				.loading-text=item.text
+				.loading-text=item.title
 				button
 					img(src=item.imgLoade alt='')
 	if name == 'load'
@@ -12,11 +12,11 @@ mixin section(name, arr)
 					- let n = 1;
 					while n < 12
 						div(class=`sk-circle${n++} sk-child`)
-				=item.text
+				=item.title
 	if name == 'error'
 		each item in arr
 			.loading
-				.loading-error=item.text
+				.loading-error=item.title
 				button.loading-error_btn
 					img(src=item.imgBasket alt='')
 					img(src=item.imgLoad alt='')

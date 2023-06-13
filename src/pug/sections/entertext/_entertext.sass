@@ -36,11 +36,17 @@
 					background: none
 					border: 2px solid #E82424
 					color: #E82424
-	.df
+	&-display
 		display: flex
+		gap: 34px
+	&-left
+		&_colors
+			&__left
+				&__image
+					img
+						width: 100%
 	&-right
-		width: 100%
-		margin-left: 34px
+		//width: 100%
 		&_input
 			margin-bottom: 36px
 			input
@@ -75,25 +81,50 @@
 							color: #00000099
 							position: absolute
 							right: 14px
+		&_propagate
+			.gap
+				display: flex
+				align-items: center
+				margin-bottom: 34px
+				.checkboxSquare
+					border: none
+					border-radius: 4px
+					border: 1px solid #D2D2D2
+					overflow: hidden
+					&:checked
+						&::after
+							content: url(../img/img99/sections/entertext/checked.svg)
+							background: #626870
+				.l
+					margin-left: 6px
+					font-size: 14px
+					font-weight: 500
+					cursor: auto
 		&_checkbox
 			display: flex
-			align-items: center
-			margin-bottom: 34px
-			.checkboxSquare
-				border: none
-				border-radius: 4px
-				border: 1px solid #D2D2D2
-				overflow: hidden
-				&:checked
-					&::after
-						content: url(../img/img99/sections/entertext/checked.svg)
-						background: #626870
-			.l
-				margin-left: 6px
-				font-size: 14px
-				font-weight: 500
-				cursor: auto
+			gap: 28px
+			margin-bottom: 20px
+			.gap
+				display: flex
+				align-items: center
+				.checkboxSquare
+					width: 26px
+					height: 26px
+					border: none
+					border-radius: 4px
+					border: 1px solid #D2D2D2
+					overflow: hidden
+					&:checked
+						&::after
+							content: url(../img/img99/sections/entertext/checked.svg)
+							background: #E82424
+				.l
+					margin-left: 6px
+					font-size: 18px
+					font-weight: 500
+					cursor: auto
 		&_range
+			margin-bottom: 64px
 			.range
 				margin-bottom: 34px
 				&-head
@@ -111,3 +142,98 @@
 					border: 1px solid #D2D2D2
 					padding: 6px 14px
 					border-radius: 8px
+		&_extension
+			display: flex
+			align-items: center
+			gap: 12px
+			font-weight: 600
+			font-size: 14px
+			input
+				border: 1px solid #D2D2D2
+				border-radius: 8px
+				padding: 16px 14px
+				width: 100%
+				margin-bottom: 20px
+				&:focus
+					outline-color: #E82424
+				&::placeholder
+					font-size: 14px
+					font-weight: 300
+					color: #00000099
+			.dropdown
+				background: $white
+				border-radius: 0
+				margin: 0
+				width: 94px
+				.dropdown-cont
+					background: $white
+					border: 2px solid #D2D2D2
+					position: relative
+					border-radius: 8px
+					padding: 6px
+					.dropdownbtn
+						color: #000000
+						font-size: 14px
+						font-weight: 600
+						&:hover
+							background: none
+						i
+							color: #000000
+							position: absolute
+							right: 8px
+	&-apply
+		.apply-cont
+			padding: 0
+			box-shadow: none
+			.lineStateMini-left
+				justify-content: flex-start
+				.loading-text
+					font-size: 14px
+				.loading
+					font-size: 14px
+					font-weight: 600
+					color: #C0C0C0
+					&-error
+						font-size: 14px
+	&-use
+		.gray
+			background: #626870
+			&:hover
+				background: #626870
+	.bottom
+		position: relative
+	&-download
+		position: absolute
+		bottom: 0
+		.btnRed
+			gap: 10px
+			display: flex
+
+@media (max-width: $xl)
+	.entertext
+		&-cont
+			padding: 34px 14px 30px 14px
+		&-display
+			flex-direction: column
+		&-right
+			margin-bottom: 30px
+		&-use
+			.gray
+				width: 100%
+				text-align: center
+		.direction
+			flex-direction: column-reverse
+		.bottom
+			margin-bottom: 40px
+		&-download
+			position: relative
+			.btnRed
+				width: 100%
+				justify-content: center
+		.lineStateMini
+			flex-direction: column
+			&-left
+				margin-bottom: 20px
+				gap: 30px
+			&-right
+				gap: 110px

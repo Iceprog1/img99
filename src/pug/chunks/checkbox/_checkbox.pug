@@ -1,8 +1,9 @@
 mixin section(name, arr)
 	if name == ''
 		each item in arr
-			input(class='checkboxSquare' type="checkbox" name="")
-			label(class='l') Размножить
+			div(class='gap')
+				input(class='checkboxSquare' type="checkbox" name="")
+				label(class='l')=item.text
 	if name == 'checkboxSmall'
 		each item in arr
 			if item.label
