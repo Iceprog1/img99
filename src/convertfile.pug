@@ -7,14 +7,18 @@ block main
 		img: '@img/img99/sections/adven/up.jpg'
 	}])
 
-	include pug/sections/blocks/block
-	+block({
+	include pug/sections/online/online
+	+online({
+		title: 'Онлайн сервис создания водяных знаков',
+		subtitle: 'Сервис позволяет, добавить водяной знак на фотографии, тем самым вы защищаете ваши фото водяным знаком быстро, легко, бесплатно и онлайн.'
 	})
 
-	include pug/sections/withus/withus
-	+withus({
-	})
-
+	include pug/sections/apply/apply
+	+apply([
+		{text: 'Название файла', mb: '13.4 МБ', title: 'Загружен'},
+		{text: 'Название файла', state: 'load', mb: '13.4 МБ', title: 'Загружается'},
+		{text: 'Название файла', state: 'error', mb: '13.4 МБ', title: 'Ошибка'}
+	], 'Файлы', 'buttonsthree', 'lineStateAccordion')
 
 	include pug/sections/support/support
 	+support({

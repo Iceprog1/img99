@@ -107,7 +107,107 @@
 		padding: 6px 12px
 
 @media (max-width: $xl)
-	.lineState
+	.lineStateMini
+		flex-direction: column
+		align-items: start
+		&-left
+			gap: 15px
+			&-file
+				&_name
+					span
+						line-height: 1
+			&_mbit
+				margin-top: 12px
+				text-align: left
+
+.lineStateAccordion
+	align-items: center
+	margin-bottom: 28px
+	display: flex
+	justify-content: space-between
+	&-left
+		display: flex
+		align-items: center
+		&_file
+			display: flex
+			align-items: center
+			gap: 16px
+			i
+				font-size: 36px
+				color: #D9D9D9
+			span
+				font-size: 16px
+				font-weight: 500
+			&__state
+				display: flex
+				align-items: center
+				gap: 10px
+				&__load
+					border: 2px solid #15BD26
+					padding: 6px 16px
+					border-radius: 8px
+					font-size: 16px
+					color: #15BD26
+					font-weight: 600
+					align-items: center
+					display: flex
+					gap: 10px
+				button
+					border: none
+					background: none
+		&_items
+			display: flex
+			align-items: center
+			gap: 20px
+			font-size: 14px
+			font-weight: 600
+			&__item
+				display: flex
+				align-items: center
+				gap: 20px
+		&_mbit
+			text-align: right
+			color: #00000099
+			font-size: 18px
+			font-weight: 500
+			p
+				margin: 0
+				color: #00000099
+				font-size: 18px
+				font-weight: 500
+	&-right
+		display: flex
+		align-items: center
+		&_download
+			text-align: right
+
+	.btnRed
+		padding: 6px 12px
+	.dropdown
+		margin: 0
+		background: none
+		width: 94px
+		min-height: 28px
+		&-cont
+			padding: 4px 8px
+			background: none
+			border: 1px solid #C0C0C0
+		.dropdownbtn
+			color: black
+			font-size: 14px
+			font-weight: 600
+			i
+				margin-left: 32px
+				color: #C0C0C0
+			&:hover
+				background: none
+	.loading
+		&--load
+			font-size: 14px
+			font-weight: 600
+
+@media (max-width: $xl)
+	.lineStateMini
 		flex-direction: column
 		align-items: start
 		&-left

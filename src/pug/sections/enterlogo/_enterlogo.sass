@@ -1,0 +1,49 @@
+.enterlogo
+	margin-bottom: 60px
+	.enterlogoBtn
+		width: 100%
+		background: $white
+		color: #00000080
+		border: 1px solid #D9D9D9
+		font-size: 14px
+		font-weight: 500
+		padding: 14px 16px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&:hover
+			background: none
+			color: #00000080
+	.bottom
+		position: relative
+	.entertext
+		&-right
+			&_range
+				margin-bottom: 42px
+
+@media (max-width: $xl)
+	.enterlogo
+		&-right
+			margin-bottom: 30px
+		&-use
+			.gray
+				width: 100%
+				text-align: center
+		.direction
+			flex-direction: column-reverse
+		.bottom
+			margin-bottom: 40px
+		&-download
+			position: relative
+			.btnRed
+				width: 100%
+				justify-content: center
+		.lineStateMini
+			flex-direction: column
+			&-left
+				margin-bottom: 20px
+				gap: 30px
+			&-right
+				gap: 110px
+		.direction
+			flex-direction: column-reverse

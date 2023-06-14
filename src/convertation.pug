@@ -7,14 +7,17 @@ block main
 		img: '@img/img99/sections/adven/up.jpg'
 	}])
 
-	include pug/sections/blocks/block
-	+block({
+	include pug/sections/convert/convert
+	+convert({
+		title: 'Конвертация фото в разные форматы',
+		subtitle: 'Сконвертируйте ваши файлы в форматы: ICO, JPG, JPEG, Webp'
 	})
 
-	include pug/sections/withus/withus
-	+withus({
+	include pug/sections/choosefile/choosefile
+	+choosefile({
+		text: 'Мы преобразовали <span>2, 008, 852, 032</span> файлов общим размером <span>39,196 ТБ</span>',
+		btntext: 'Перетащите файлы сюда. 100 MB максимальный размер файла'
 	})
-
 
 	include pug/sections/support/support
 	+support({

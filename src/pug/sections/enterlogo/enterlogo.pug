@@ -1,6 +1,6 @@
-mixin entertext(arr)
+mixin enterlogo(arr)
 	each item in arr
-		section.entertext
+		section.enterlogo
 			.container
 				.entertext-cont
 					.entertext-title
@@ -37,39 +37,29 @@ mixin entertext(arr)
 											if item.img
 											.entertext-left_colors__left__image
 												img(src=item.img alt='')
-									.entertext-left_colorpicker
-										+colorpicker('')
 								.entertext-right
 									.entertext-right_input
-										input(type="text" name="" placeholder="Введите текст")
-										+accordion('default', [{
-											btnText: 'Выберите шрифт'
-										}])
+										+btn('', [
+										{
+											'class': 'btnRed enterlogoBtn',
+											'text': 'Загрузить логотип',
+											'href': '#',
+											'imgR': '@img/img99/sections/apply/btn.svg'
+										}
+										])
 									.entertext-right_propagate
 										+checkbox('', [{
 											text: 'Размножить'
 										}])
 									.entertext-right_range
 										+input('rangeInput', [{
-											title: 'Отступ между текстом:',
+											title: 'Прозрачность логотипа:',
 											min: '0',
 											max: '100',
 											value: '16'
 										}])
 										+input('rangeInput', [{
-											title: 'Размер шрифта:',
-											min: '0',
-											max: '100',
-											value: '16'
-										}])
-										+input('rangeInput', [{
-											title: 'Прозрачность шрифта:',
-											min: '0',
-											max: '100',
-											value: '16'
-										}])
-										+input('rangeInput', [{
-											title: 'Угол наклона шрифта:',
+											title: 'Размер:',
 											min: '0',
 											max: '100',
 											value: '16'
@@ -97,10 +87,10 @@ mixin entertext(arr)
 						.col-md-6.bottom
 							.entertext-apply
 								+apply([
-									{text: 'Название файла.jpg', format: 'ICO/', mb: '13.4 МБ', title: '-13% Готов' },
+									{text: 'Название файла.jpg', mb: '13.4 МБ', title: 'Готов' },
 									{text: 'Название файла.jpg', state: 'load', mb: '13.4 МБ', title: 'Обработка'},
 									{text: 'Название файла.jpg', state: 'error', mb: '13.4 МБ', title: 'Ошибка'}
-								], 'Файлы', '' , 'lineStateMini')
+								], 'Файлы', '', 'lineStateMini')
 							.entertext-download
 								+btn('', [
 									{

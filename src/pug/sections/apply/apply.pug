@@ -12,7 +12,7 @@ mixin section(arr, applyTitle, buttons, name)
 							title: item.title,
 							format: item.format
 						}])
-				if buttons
+				if buttons == 'buttons'
 					.row
 						.apply-btns
 							+btn('', [
@@ -23,6 +23,28 @@ mixin section(arr, applyTitle, buttons, name)
 								'imgR': '@img/img99/sections/apply/btn.svg'
 							}
 							])
+							+btn('', [
+							{
+								'class': 'btnRed chooseBtn',
+								'text': 'Нанести водяной знак',
+								'href': '#',
+								'imgR': '@img/img99/sections/apply/arrow.svg'
+							}
+							])
+				if buttons == 'buttonsthree'
+					.row
+						.apply-btns
+							+btn('', [
+							{
+								'class': 'btnRed applyBtn',
+								'text': 'Добавить еще',
+								'href': '#',
+								'imgR': '@img/img99/sections/apply/btn.svg'
+							}
+							])
+							+accordion('btn', [{
+								btnText: 'ICO'
+							}])
 							+btn('', [
 							{
 								'class': 'btnRed chooseBtn',

@@ -50,6 +50,23 @@ mixin section(name, arr)
 						.accordion-content
 							ul
 								li Состав Ткани: 77 % Полиэстер, 20% Вискоза, 3% Эластан
+	if name == 'btn'
+		each item in arr
+			.dropdown
+				.dropdown-cont
+					+btn('',[
+						{
+							class: 'dropdownbtn mybtn',
+							faR: 'fas fa-chevron-down',
+							text: item.btnText
+						}
+					])
+					if item.class
+						ul(class=item.class)
+							li
+								if item.href
+									a(href=item.href) 
+										=item.text
 
 
 

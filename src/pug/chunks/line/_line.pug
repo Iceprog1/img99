@@ -77,3 +77,35 @@ mixin section(name, arr)
 									'imgR': '@img/img99/sections/entertext/download.svg'
 								}
 								])
+	if name == 'lineStateAccordion'
+		each item in arr
+			.lineStateAccordion
+				.col-md-10
+					.lineStateAccordion-left
+						.col-md-6
+							.lineStateAccordion-left_file
+								i.fas.fa-image
+								span=item.text
+						.col-md-6
+							.lineStateAccordion-left_items
+								.lineStateAccordion-left_items__item в
+									+accordion('default', [{
+										btnText: 'ICO'
+									}])
+								if !item.state
+									+loading('', [{
+										title: item.title,
+										imgLoade: '@img/img99/sections/apply/basket.svg'
+									}])
+								if item.state == 'load'
+									+loading('load', [{
+										title: item.title
+									}])
+								if item.state == 'error'
+									+loading('error', [{
+										title: item.title,
+										imgBasket: '@img/img99/sections/apply/basket.svg',
+										imgLoad: '@img/img99/sections/apply/load.svg'
+									}])
+				.col-md-2
+					.lineStateAccordion-left_mbit=item.mb
