@@ -9,16 +9,15 @@ block main
 
 	include pug/sections/convert/convert
 	+convert({
-		title: 'Конвертация фото в разные форматы',
-		subtitle: 'Сконвертируйте ваши файлы в форматы: ICO, JPG, JPEG, Webp'
+		title: 'Сжатие фотографий без потери качества',
+		subtitle: 'Cервис поможет вам сжать фото, не теряя его качества'
 	})
 
-	include pug/sections/apply/apply
-	+apply([
-		{text: 'Название файла', mb: '13.4 МБ', title: 'Загружен'},
-		{text: 'Название файла', state: 'load', mb: '13.4 МБ', title: 'Загружается'},
-		{text: 'Название файла', state: 'error', mb: '13.4 МБ', title: 'Ошибка'}
-	], 'Файлы', 'buttonsthree', 'lineStateAccordion')
+	include pug/sections/choosefile/choosefile
+	+choosefile({
+		text: 'Мы преобразовали <span>2, 008, 852, 032</span> файлов общим размером <span>39,196 ТБ</span>',
+		btntext: 'Перетащите файлы сюда. 100 MB максимальный размер файла'
+	})
 
 	include pug/sections/support/support
 	+support({

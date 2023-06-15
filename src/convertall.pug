@@ -15,10 +15,10 @@ block main
 
 	include pug/sections/apply/apply
 	+apply([
-		{text: 'Название файла', mb: '13.4 МБ', title: 'Загружен'},
-		{text: 'Название файла', state: 'load', mb: '13.4 МБ', title: 'Загружается'},
+		{text: 'Название файла', mb: 'ICO / 13.4 МБ', title: 'Готово'},
+		{text: 'Название файла', state: 'load', mb: '13.4 МБ', title: 'Конвертируется'},
 		{text: 'Название файла', state: 'error', mb: '13.4 МБ', title: 'Ошибка'}
-	], 'Файлы', 'buttonsthree', 'lineStateAccordion')
+	], 'Файлы', 'buttonsone', 'lineStateMini')
 
 	include pug/sections/support/support
 	+support({

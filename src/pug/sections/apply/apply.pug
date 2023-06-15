@@ -31,6 +31,17 @@ mixin section(arr, applyTitle, buttons, name)
 								'imgR': '@img/img99/sections/apply/arrow.svg'
 							}
 							])
+				if buttons == 'buttonsone'
+					.row
+						.apply-btns.end
+							+btn('', [
+							{
+								'class': 'btnRed applyBtn',
+								'text': 'Скачать архив',
+								'href': '#',
+								'imgR': '@img/img99/sections/apply/download.svg'
+							}
+							])
 				if buttons == 'buttonsthree'
 					.row
 						.apply-btns
@@ -43,7 +54,7 @@ mixin section(arr, applyTitle, buttons, name)
 							}
 							])
 							+accordion('btn', [{
-								btnText: 'ICO'
+								btnText: 'Сконвертировать все в'
 							}])
 							+btn('', [
 							{
