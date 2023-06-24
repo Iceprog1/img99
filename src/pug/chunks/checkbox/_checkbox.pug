@@ -2,13 +2,13 @@ mixin section(name, arr)
 	if name == ''
 		each item in arr
 			div(class='gap')
-				input(class='checkboxSquare' type="checkbox" name="")
-				label(class='l')=item.text
+				input(id='gap1' class='checkboxSquare' type="checkbox" name="")
+				label(class='l' for='gap1')=item.text
 	if name == 'checkboxSmall'
 		each item in arr
 			if item.label
-				label.checkboxSmallLabel
-					input(class='checkboxSmall' type="checkbox" name="")
+				label(for='checkboxsma').checkboxSmallLabel
+					input(id='checkboxsma' class='checkboxSmall' type="checkbox" name="")
 					span=item.label
 			else 
 				input(class='checkboxSmall' type="checkbox" name="")

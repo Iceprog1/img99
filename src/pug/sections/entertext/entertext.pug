@@ -42,9 +42,14 @@ mixin entertext(arr)
 								.entertext-right
 									.entertext-right_input
 										input(type="text" name="" placeholder="Введите текст")
-										+accordion('default', [{
-											btnText: 'Выберите шрифт'
-										}])
+										+accordion('default', [
+											{
+												class: 'accordion-list',
+												href: '#',
+												text: 'Times New Roman',
+												btnText: 'Выберите шрифт'
+											}
+										])
 									.entertext-right_propagate
 										+checkbox('', [{
 											text: 'Размножить'
@@ -83,9 +88,14 @@ mixin entertext(arr)
 										}])
 									.entertext-right_extension
 										span в
-										+accordion('default', [{
-											btnText: 'ICO'
-										}])
+										+accordion('default', [
+											{
+												class: 'accordion-list',
+												href: '#',
+												text: 'PSD',
+												btnText: 'ICO'
+											}
+										])
 							.entertext-use
 								+btn('', [
 									{

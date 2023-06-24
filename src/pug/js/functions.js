@@ -42,8 +42,8 @@ export function addRemoveClass(element, nextElem = '', addRemove = "active") {
 		// Делаем клик по текущему элементу
 		clickElement[i].onclick = () => {
 			// Добавляет или удаляет класс active
-			nextEl.classList.toggle(addRemove);
-			console.log(111);
+			//nextEl.classList.toggle(addRemove);
+			clickElement[i].closest('.dropdown').classList.toggle(addRemove)
 		}
 	}
 

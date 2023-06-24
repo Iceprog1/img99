@@ -1,16 +1,16 @@
 mixin section(name, arr)
 	if name == 'bottomLine'
 		each item in arr
-			input(type="text" placeholder=item.placeholder class='bottomLine')
+			input(type="text" placeholder=item.placeholder class='bottomLine' aria-label="label")
 	//- Квадратное поле ввода с тенью
 	if name == 'squareShadow'
 		each item in arr
 			if item.label
 				label.squareShadowLabel
 					span=item.label
-					input(type="text" placeholder=item.placeholder class='squareShadow' name=item.name)
+					input(type="text" placeholder=item.placeholder class='squareShadow' name=item.name aria-label="label")
 			else
-				input(type="text" placeholder=item.placeholder class='squareShadow' name=item.name)
+				input(type="text" placeholder=item.placeholder class='squareShadow' name=item.name aria-label="label")
 	if name == 'rangeInput'
 		each item in arr
 			.range
@@ -18,4 +18,4 @@ mixin section(name, arr)
 					.range-title=item.title
 					span.range-numb 0
 				.range-cont
-					input(class="range-input" type="range" min=item.min max=item.max value=item.value)
+					input(class="range-input" type="range" min=item.min max=item.max value=item.value aria-label="label")

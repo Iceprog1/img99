@@ -3,8 +3,8 @@ mixin section(name, arr)
 		each item in arr
 			.loading
 				.loading-text=item.title
-				button
-					img(src=item.imgLoade alt='')
+				button(aria-label='btn')
+					img(src=item.imgLoade alt='' aria-label='load')
 	if name == 'load'
 		each item in arr
 			.loading.loading--load
@@ -17,6 +17,6 @@ mixin section(name, arr)
 		each item in arr
 			.loading
 				.loading-error=item.title
-				button.loading-error_btn
-					img(src=item.imgBasket alt='')
-					img(src=item.imgLoad alt='')
+				button(aria-label='btn').loading-error_btn
+					img(src=item.imgBasket alt='' aria-label='basket')
+					img(src=item.imgLoad alt='' aria-label='load')

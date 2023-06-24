@@ -26,21 +26,21 @@ import { ftp } from './gulp/tasks/ftp.js' // отправляем файлы н�
 
 
 //наблюдатль (смотрит за изменениями в файлах)
+//function watcher() {
+//	gulp.watch(path.watch.files, copy);
+//	gulp.watch(path.watch.html, html);
+//	gulp.watch(path.watch.sass, sass);
+//	gulp.watch(path.watch.js, js);
+//	gulp.watch(path.watch.images, images);
+//}
+
 function watcher() {
 	gulp.watch(path.watch.files, copy);
-	gulp.watch(path.watch.html, html);
-	gulp.watch(path.watch.sass, sass);
-	gulp.watch(path.watch.js, js);
+	gulp.watch(path.watch.html, gulp.series(html, ftp));
+	gulp.watch(path.watch.sass, gulp.series(sass, ftp));
+	gulp.watch(path.watch.js, gulp.series(js, ftp));
 	gulp.watch(path.watch.images, images);
 }
-
-//function watcher() {
-//	gulp.watch(path.watch.files, gulp.series(copy, ftp));
-//	gulp.watch(path.watch.html, gulp.series(html, ftp));
-//	gulp.watch(path.watch.sass, gulp.series(sass, ftp));
-//	gulp.watch(path.watch.js, gulp.series(js, ftp));
-//	gulp.watch(path.watch.images, gulp.series(images, ftp));
-//}
 
 //Последовательное обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
